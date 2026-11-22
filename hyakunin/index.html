@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#172939">
+<meta name="description" content="百人一首100首を、オリジナルのパワーワードで上の句から下の句へ。歌全文・意味・苦手復習を一つに。">
+<title>百人一首 記憶道場 — パワーワード暗記</title>
+<style>
+:root{--bg:#f6f5f0;--paper:#fffefb;--ink:#1a3040;--muted:#6f777a;--accent:#a83d35;--accent-soft:#f9e9e4;--line:#dedfdc;--green:#23775f;--green-soft:#e4f5ec;--gold:#9b6b27;--gold-soft:#fbf0d9;--shadow:0 18px 48px rgba(23,41,57,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;font-size:15px;line-height:1.65}
+button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #db9870;outline-offset:2px}
+a{color:var(--accent)}.shell{max-width:1080px;margin:0 auto;padding:0 25px 65px}
+.masthead{background:var(--ink);color:#fff;padding:29px 0 0;position:relative;overflow:hidden}.masthead:before{content:"百";position:absolute;right:4%;top:-92px;font-size:280px;font-family:serif;color:#ffffff08;pointer-events:none}.top{display:flex;gap:20px;align-items:center;justify-content:space-between}.overline{color:#f6b5a6;font-size:11px;letter-spacing:.18em;font-weight:800}.brand{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(27px,4.8vw,43px);font-weight:800;letter-spacing:.045em;line-height:1.15;margin:8px 0}.tagline{color:#cad3d7;margin:8px 0 26px;font-size:13px}.stamp{font-family:serif;flex:none;border:1px solid #bc7b6b;color:#efb6a3;padding:12px 13px;font-size:14px;line-height:1.25;text-align:center;transform:rotate(-6deg)}
+.masthead .shell{padding-bottom:0}.tabs{display:flex;gap:0;position:relative;z-index:1}.tab{background:none;border:0;color:#aab6bb;padding:13px 23px;font-weight:700;border-bottom:3px solid transparent}.tab[aria-selected=true]{border-bottom-color:#ef9f85;color:white}.tab:hover{color:white}
+main{padding-top:29px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px}.stat{background:var(--paper);border:1px solid var(--line);padding:12px 18px;border-radius:11px;display:flex;flex-wrap:wrap;align-items:baseline;gap:5px;justify-content:space-between}.stat b{font-size:29px;line-height:1.4;font-family:Georgia,serif}.stat small{font-size:12px;color:var(--muted)}.stat.primary b{color:var(--green)}
+.panel{border:1px solid var(--line);border-radius:15px;background:var(--paper);box-shadow:var(--shadow)}.control-panel{padding:17px 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin-bottom:20px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:11px;font-weight:800;letter-spacing:.07em;color:var(--muted)}select,.search-input{border:1px solid #cbd0cd;border-radius:8px;padding:9px 13px;background:white;min-height:40px;color:var(--ink)}.controls-end{margin-left:auto;display:flex;gap:8px}.smallbtn{background:white;border:1px solid #ccd0ca;color:var(--ink);border-radius:8px;padding:8px 12px;font-size:12px;font-weight:700}.smallbtn:hover{background:#f5f6f2}.smallbtn.active{border-color:#d49c86;color:var(--accent);background:var(--accent-soft)}
+.quiz{overflow:hidden}.quiz-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:15px 25px;background:#fbfbf8;gap:12px}.idmark{display:flex;align-items:center;gap:10px}.round{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--ink);color:white;border-radius:50%;font:700 14px Georgia,serif}.minor{font-size:12px;color:var(--muted)}.pill{border-radius:100px;border:1px solid #e2d2af;color:#8a632e;background:#fbf5e6;padding:4px 9px;font-size:11px;font-weight:800}.pill.weak{color:var(--accent);background:var(--accent-soft);border-color:#f0c7c0}.cue-panel{padding:36px 30px 27px;text-align:center;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}.ribbon{color:var(--accent);font-size:11px;letter-spacing:.15em;font-weight:800;margin-bottom:13px}.cue{font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;font-size:clamp(29px,5.3vw,49px);font-weight:700;line-height:1.6;letter-spacing:.04em;margin:0 auto;max-width:800px}.cue span{display:block}.cue .cue-highlight{color:var(--accent)}.small-line{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:24px}.more-upper{border:0;background:transparent;color:var(--muted);text-decoration:underline;text-underline-offset:3px;padding:7px;margin-top:10px;font-size:12px}.hintbox{margin:4px auto 15px;padding:14px 20px;max-width:600px;border:1px dashed #cf8f82;border-radius:10px;background:#fff7f2;color:var(--ink)}.hintbox .hintlabel{color:var(--accent);font-size:11px;font-weight:800;display:block}.hintbox strong{font-size:clamp(20px,3.2vw,28px);font-weight:900}.action-row{padding:0 25px 24px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}.btn{border:1px solid transparent;padding:12px 22px;border-radius:9px;font-weight:800;min-height:47px;transition:transform .1s,background .15s}.btn:active{transform:scale(.98)}.btn-main{background:var(--accent);color:#fff}.btn-main:hover{background:#862e29}.btn-outline{background:#fff;border-color:#d7b6ad;color:var(--accent)}.btn-outline:hover{background:#fff5f1}.btn-sub{background:var(--ink);color:white}.btn-sub:hover{background:#304959}.answer-pane{padding:23px clamp(20px,4vw,44px) 30px;border-top:1px solid var(--line);background:linear-gradient(#fffcf6,#fffefc)}.answer-label{font-size:11px;color:var(--muted);font-weight:900;letter-spacing:.1em}.answer-large{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(22px,4.6vw,33px);font-weight:700;color:var(--accent);margin:5px 0 21px}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.detail-box{padding:17px 20px;background:#fff;border:1px solid #ece7dc;border-radius:11px}.section-head{font-size:11px;letter-spacing:.08em;font-weight:900;color:var(--muted);margin:0 0 9px}.poem-full{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:18px;line-height:1.85}.poem-full span{display:block}.poem-full .low{color:var(--accent);font-weight:700}.writer{font-size:12px;color:var(--muted);margin-top:8px}.detail-box p{margin:4px 0 0}.word-big{color:var(--ink);font-size:20px;font-weight:900;margin:8px 0;line-height:1.55}.editing{margin-top:11px;display:flex;gap:8px;align-items:flex-start}.editing textarea{width:100%;min-height:67px;resize:vertical;padding:10px;border:1px solid var(--line);border-radius:7px}.score-area{margin-top:22px;border-top:1px solid #e8e4de;padding-top:18px}.score-area h3{font-size:14px;margin:0 0 9px}.score-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.score-buttons button{border:1px solid var(--line);background:white;padding:10px 9px;border-radius:9px;font-weight:800;color:var(--ink)}.score-buttons button:hover{border-color:#aaa}.score-buttons .bad{border-color:#eab8ad;background:#fff1ed;color:#943e36}.score-buttons .medium{border-color:#f1d7a1;background:#fff9e9;color:#7e5e25}.score-buttons .good{border-color:#bbdac9;background:#f0fbf4;color:#216850}.score-buttons button.chosen{box-shadow:0 0 0 3px #b7bfbd}.score-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}.status{font-size:12px;color:var(--muted)}.next-row{padding:12px 25px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.next-row p{color:var(--muted);font-size:12px;margin:0}.empty{padding:55px 25px;text-align:center}.empty h2{font-size:21px}.empty p{color:var(--muted)}
+.list-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:15px}.list-top h2{font-family:"Yu Mincho",serif;font-size:25px;margin:0}.list-top p{margin:3px 0;color:var(--muted);font-size:12px}.list-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.search-input{width:min(320px,85vw)}.card-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.listcard{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:14px 17px;text-align:left;color:var(--ink);width:100%;min-height:112px}.listcard:hover{border-color:#c58270;background:#fffcf8}.lc-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.lc-index{font:700 13px Georgia,serif;color:var(--accent)}.lc-word{font-size:17px;font-weight:900;margin:5px 0 3px}.lc-pair{font-size:12px;color:var(--muted);line-height:1.5}.lc-state{margin-left:auto;border-radius:5px;padding:2px 6px;font-size:10px;background:#f0f1f0;color:#5d6465}.lc-state.ok{background:#e4f3e9;color:#23775f}.lc-state.bad{background:#fae9e2;color:#9c453d}.lc-state.mid{background:#fff2d8;color:#856322}.footnote{font-size:12px;color:var(--muted);margin:15px 2px}
+.guide{padding:27px 31px}.guide h2{font-family:"Yu Mincho",serif;font-size:23px;margin-top:0}.guide h3{font-size:16px;margin-bottom:6px}.guide p,.guide li{font-size:14px}.guide .guide-row{display:grid;grid-template-columns:1fr 1fr;gap:26px}.data-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.muted{color:var(--muted)}.site-footer{text-align:center;font-size:11px;color:var(--muted);margin:35px 0 4px}.is-hidden{display:none!important}
+@media(max-width:720px){.shell{padding:0 14px 45px}.masthead{padding-top:18px}.top{padding:0 14px}.stamp{display:none}.brand{font-size:29px}.tagline{line-height:1.5;margin-bottom:18px}.tabs{padding:0 5px}.tab{flex:1;padding:11px 8px}.stats{grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:15px}.stat{padding:10px 9px;border-radius:8px;display:block}.stat b{display:block;font-size:24px}.stat small{font-size:10px}.control-panel{padding:12px;gap:8px}.field{flex:1;min-width:120px}.field select{width:100%}.controls-end{margin:0;width:100%;justify-content:space-between}.quiz-top{padding:12px 15px}.cue-panel{min-height:230px;padding:28px 15px 20px}.cue{font-size:clamp(28px,7vw,40px)}.action-row{padding:0 14px 21px}.action-row .btn{flex:1;padding:10px 12px}.answer-pane{padding:18px 14px 25px}.detail-grid{grid-template-columns:1fr;gap:11px}.detail-box{padding:15px}.score-buttons{gap:6px}.score-buttons button{font-size:12px;padding:9px 4px}.next-row{padding:11px 15px}.next-row p{font-size:11px}.card-list{grid-template-columns:1fr}.listcard{min-height:100px}.guide{padding:20px 17px}.guide .guide-row{grid-template-columns:1fr;gap:4px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+@media print{.masthead,.stats,.control-panel,.action-row,.next-row,.site-footer,.score-area{display:none!important}.shell{max-width:none}.quiz{box-shadow:none}.answer-pane{display:block!important}}
+</style>
+<style>
+:root{--bg:#f7f5ef;--paper:#fffefb;--ink:#1b3040;--muted:#66737b;--red:#a83d35;--line:#ddd9d2}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.65}
+.st-wrap{max-width:820px;margin:0 auto;padding:20px 16px 80px}.st-head{padding:15px 0 5px}.st-eyebrow{color:var(--red);font-weight:900;font-size:12px;letter-spacing:.1em}.st-head h1{font-size:clamp(25px,5vw,37px);margin:5px 0;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}.st-head p{font-size:14px;color:var(--muted)}
+.st-guide{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin:18px 0;font-size:13px}.st-guide strong{color:var(--red)}
+.st-toc{display:flex;flex-wrap:wrap;gap:7px;padding:8px 0 17px}.st-toc a,.st-back{border:1px solid #d6d4ce;color:var(--ink);border-radius:6px;background:white;padding:6px 10px;text-decoration:none;font-size:12px}
+.st-group{margin:15px 0 20px}.st-group h2{font-size:15px;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.st-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:9px 0;box-shadow:0 3px 15px #17293906;overflow:hidden}
+.st-card[open]{border-color:#d0afa8}.st-card summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:15px 15px;min-height:64px}.st-card summary::-webkit-details-marker{display:none}.st-card summary:focus-visible{outline:2px solid var(--red);outline-offset:-3px}
+.st-number{color:white;border-radius:8px;background:var(--ink);font-weight:700;font-size:12px;padding:7px 8px;flex:none}.st-title{font-size:clamp(17px,3vw,21px);font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:800;flex:1;min-width:0;overflow-wrap:anywhere}.st-dupe{font-size:10px;color:var(--red);font-weight:900;white-space:nowrap}
+.st-chevron{font-size:18px;color:var(--red);transition:transform .18s}.st-card[open] .st-chevron{transform:rotate(90deg)}
+.st-result{border-top:1px solid var(--line);padding:17px 19px 20px;background:#fff}.st-label{font-size:11px;font-weight:800;color:var(--red);letter-spacing:.08em;margin:10px 0 3px}
+.st-answer{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:clamp(19px,3.7vw,26px);font-weight:800;margin:3px 0 13px}.st-word{font-size:21px;font-weight:900;margin:5px 0 18px;color:#97382f}
+.st-full{border-left:3px solid #e4d5ca;padding-left:14px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:17px;line-height:1.9;margin:7px 0}.st-full .st-low{font-weight:800;color:var(--red)}.st-author{font-size:12px;color:var(--muted)}.st-meaning{font-size:14px;margin:6px 0 0}.st-bottom{margin-top:14px;display:flex;justify-content:flex-end}.st-back{display:inline-block}.st-footer{padding:25px 0 0;font-size:12px;color:var(--muted)}
+@media(max-width:430px){.st-card summary{gap:9px;padding:13px 10px}.st-number{padding:6px}.st-dupe{font-size:9px}.st-title{font-size:18px}.st-toc a{font-size:11px}}
+@media print{body{background:white}.st-card{break-inside:avoid}.st-card:not([open]){display:none}.st-toc{display:none}}
+
+html.enhanced #nojs-deck{display:none!important}
+html:not(.enhanced) .masthead,html:not(.enhanced) main,html:not(.enhanced) .site-footer{display:none!important}
+</style></head>
+<body><section id="nojs-deck"><div class="st-wrap" id="st-top"><header class="st-head"><div class="st-eyebrow">100 POEMS · NO SCRIPT REQUIRED</div><h1>百人一首　暗記カード</h1><p>上の句を見て下の句を思い出す。札をタップすると、答え・パワーワード・歌全文・意味が開きます。</p></header>
+ <div class="st-guide"><strong>使い方</strong>：上の句を読んで下の句を思い浮かべ、札をタップして答え合わせ。もう一度タップすれば閉じます。<br>この版はJavaScript不要。音声・進捗保存・ランダム出題などは利用できません。</div><nav class="st-toc" aria-label="歌番号で移動"><a href="#group-1">1–20</a><a href="#group-21">21–40</a><a href="#group-41">41–60</a><a href="#group-61">61–80</a><a href="#group-81">81–100</a></nav>
+ <section id="group-1" class="st-group"><h2>1〜20番</h2><details class="st-card" id="poem-001"><summary><span class="st-number">001</span><span class="st-title">あきのたの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">わが衣手は　露にぬれつつ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">秋の田の、我がコロも出っ歯 <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">秋の田の</div><div class="">かりほの庵の</div><div class="">苫をあらみ</div><div class="st-low">わが衣手は</div><div class="st-low">露にぬれつつ</div></div><div class="st-author">天智天皇</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">秋の田を見張る粗末な小屋は屋根の編み目が粗く、私の袖は露に濡れてしまう。</p>
+ </div></details>
+<details class="st-card" id="poem-002"><summary><span class="st-number">002</span><span class="st-title">はるすぎて</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">衣干すてふ　天の香具山</div>
+ <div class="st-label">パワーワード</div><div class="st-word">春過ぎて、コロも干す</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">春過ぎて</div><div class="">夏来にけらし</div><div class="">白妙の</div><div class="st-low">衣干すてふ</div><div class="st-low">天の香具山</div></div><div class="st-author">持統天皇</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">春は過ぎて夏が来たらしい。香具山には真っ白な衣が干されているという。</p>
+ </div></details>
+<details class="st-card" id="poem-003"><summary><span class="st-number">003</span><span class="st-title">あしびきの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">ながながし夜を　ひとりかも寝む</div>
+ <div class="st-label">パワーワード</div><div class="st-word">足ビキッの、長々し夜を <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">あしびきの</div><div class="">山鳥の尾の</div><div class="">しだり尾の</div><div class="st-low">ながながし夜を</div><div class="st-low">ひとりかも寝む</div></div><div class="st-author">柿本人麻呂</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">山鳥の長く垂れた尾のように、長い長い夜を私は一人で眠るのだろうか。</p>
+ </div></details>
+<details class="st-card" id="poem-004"><summary><span class="st-number">004</span><span class="st-title">たごのうらに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">富士の高嶺に　雪は降りつつ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">タコの裏にフジツボ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">田子の浦に</div><div class="">うち出でて見れば</div><div class="">白妙の</div><div class="st-low">富士の高嶺に</div><div class="st-low">雪は降りつつ</div></div><div class="st-author">山部赤人</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">田子の浦に出て眺めると、富士山の高い峰に真っ白な雪が降り積もっている。</p>
+ </div></details>
+<details class="st-card" id="poem-005"><summary><span class="st-number">005</span><span class="st-title">おくやまに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">声聞く時ぞ　秋は悲しき</div>
+ <div class="st-label">パワーワード</div><div class="st-word">お悔やみに、声聞く時ぞ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">奥山に</div><div class="">紅葉踏み分け</div><div class="">鳴く鹿の</div><div class="st-low">声聞く時ぞ</div><div class="st-low">秋は悲しき</div></div><div class="st-author">猿丸大夫</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">奥山で紅葉を踏み分けて鳴く鹿の声を聞くと、秋はなんと悲しいのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-006"><summary><span class="st-number">006</span><span class="st-title">かささぎの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">白きを見れば　夜ぞ更けにける</div>
+ <div class="st-label">パワーワード</div><div class="st-word">傘詐欺の、シロ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">かささぎの</div><div class="">渡せる橋に</div><div class="">置く霜の</div><div class="st-low">白きを見れば</div><div class="st-low">夜ぞ更けにける</div></div><div class="st-author">中納言家持</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">かささぎが架けたといわれる天上の橋に霜が白く降り、夜が更けたことを知る。</p>
+ </div></details>
+<details class="st-card" id="poem-007"><summary><span class="st-number">007</span><span class="st-title">あまのはら</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">三笠の山に　出でし月かも</div>
+ <div class="st-label">パワーワード</div><div class="st-word">海女の腹、三笠の山に <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">天の原</div><div class="">ふりさけ見れば</div><div class="">春日なる</div><div class="st-low">三笠の山に</div><div class="st-low">出でし月かも</div></div><div class="st-author">阿倍仲麻呂</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">広い空を見上げると、故郷の三笠山に昇っていたのと同じ月が見える。</p>
+ </div></details>
+<details class="st-card" id="poem-008"><summary><span class="st-number">008</span><span class="st-title">わがいほは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">世をうぢ山と　人はいふなり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">我が胃オワ、用事山と</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">わが庵は</div><div class="">都のたつみ</div><div class="">しかぞ住む</div><div class="st-low">世をうぢ山と</div><div class="st-low">人はいふなり</div></div><div class="st-author">喜撰法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">都の南東、宇治の山に静かに暮らしている。世を憂えて住むのだと人は言うようだ。</p>
+ </div></details>
+<details class="st-card" id="poem-009"><summary><span class="st-number">009</span><span class="st-title">はなのいろは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">わが身世にふる　ながめせし間に</div>
+ <div class="st-label">パワーワード</div><div class="st-word">鼻の色は、わっ、紙よ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">花の色は</div><div class="">移りにけりな</div><div class="">いたづらに</div><div class="st-low">わが身世にふる</div><div class="st-low">ながめせし間に</div></div><div class="st-author">小野小町</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">花の色は衰えてしまった。長雨を眺めている間に、私の美しさも年とともに過ぎた。</p>
+ </div></details>
+<details class="st-card" id="poem-010"><summary><span class="st-number">010</span><span class="st-title">これやこの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">知るも知らぬも　逢坂の関</div>
+ <div class="st-label">パワーワード</div><div class="st-word">これや、この汁も知らぬ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">これやこの</div><div class="">行くも帰るも</div><div class="">別れては</div><div class="st-low">知るも知らぬも</div><div class="st-low">逢坂の関</div></div><div class="st-author">蝉丸</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">これが、人々が行き来し、知る人も知らぬ人も出会い別れる逢坂の関なのだ。</p>
+ </div></details>
+<details class="st-card" id="poem-011"><summary><span class="st-number">011</span><span class="st-title">わたのはら　やそしま</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人には告げよ　あまの釣舟</div>
+ <div class="st-label">パワーワード</div><div class="st-word">腸の腹や、人にハツ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">わたの原</div><div class="">八十島かけて</div><div class="">漕ぎ出でぬと</div><div class="st-low">人には告げよ</div><div class="st-low">あまの釣舟</div></div><div class="st-author">参議篁</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">広い海を、たくさんの島へ向かって船出したと、釣り舟よ、人々に伝えてくれ。</p>
+ </div></details>
+<details class="st-card" id="poem-012"><summary><span class="st-number">012</span><span class="st-title">あまつかぜ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">をとめの姿　しばしとどめむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">雨っ風、お止め！</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">天つ風</div><div class="">雲の通ひ路</div><div class="">吹きとぢよ</div><div class="st-low">をとめの姿</div><div class="st-low">しばしとどめむ</div></div><div class="st-author">僧正遍昭</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">天の風よ、天女たちの帰り道を雲でふさいで、その美しい姿をもう少し見せておくれ。</p>
+ </div></details>
+<details class="st-card" id="poem-013"><summary><span class="st-number">013</span><span class="st-title">つくばねの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">恋ぞつもりて　淵となりぬる</div>
+ <div class="st-label">パワーワード</div><div class="st-word">突く羽根の、故意ぞ、つもりで</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">筑波嶺の</div><div class="">峰より落つる</div><div class="">みなの川</div><div class="st-low">恋ぞつもりて</div><div class="st-low">淵となりぬる</div></div><div class="st-author">陽成院</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">筑波山から流れる川が深い淵になるように、私の恋心も積もり積もって深くなった。</p>
+ </div></details>
+<details class="st-card" id="poem-014"><summary><span class="st-number">014</span><span class="st-title">みちのくの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">乱れそめにし　われならなくに</div>
+ <div class="st-label">パワーワード</div><div class="st-word">みちのくの、乱れそうめん <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">みちのくの</div><div class="">しのぶもぢずり</div><div class="">誰ゆゑに</div><div class="st-low">乱れそめにし</div><div class="st-low">われならなくに</div></div><div class="st-author">河原左大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">乱れ模様の布のように、私の心は誰のせいでこんなに乱れ始めたのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-015"><summary><span class="st-number">015</span><span class="st-title">きみがため　はるのの</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">わが衣手に　雪は降りつつ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">黄身固めは、我が衣で煮</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">君がため</div><div class="">春の野に出でて</div><div class="">若菜摘む</div><div class="st-low">わが衣手に</div><div class="st-low">雪は降りつつ</div></div><div class="st-author">光孝天皇</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">あなたのために春の野で若菜を摘んでいると、私の袖に雪が降りかかる。</p>
+ </div></details>
+<details class="st-card" id="poem-016"><summary><span class="st-number">016</span><span class="st-title">たちわかれ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">まつとし聞かば　今帰り来む</div>
+ <div class="st-label">パワーワード</div><div class="st-word">立ち分かれ、マット敷き</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">立ち別れ</div><div class="">いなばの山の</div><div class="">峰に生ふる</div><div class="st-low">まつとし聞かば</div><div class="st-low">今帰り来む</div></div><div class="st-author">中納言行平</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">遠くへ旅立つけれど、「待っている」と聞いたら、すぐに帰って来よう。</p>
+ </div></details>
+<details class="st-card" id="poem-017"><summary><span class="st-number">017</span><span class="st-title">ちはやぶる</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">からくれなゐに　水くくるとは</div>
+ <div class="st-label">パワーワード</div><div class="st-word">血は破る、唐紅に <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">ちはやぶる</div><div class="">神代も聞かず</div><div class="">竜田川</div><div class="st-low">からくれなゐに</div><div class="st-low">水くくるとは</div></div><div class="st-author">在原業平朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">神代にも聞いたことがない。竜田川が紅葉によって真紅に染められるなんて。</p>
+ </div></details>
+<details class="st-card" id="poem-018"><summary><span class="st-number">018</span><span class="st-title">すみのえの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">夢の通ひ路　人めよくらむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">スケベな夢 <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">住の江の</div><div class="">岸に寄る波</div><div class="">よるさへや</div><div class="st-low">夢の通ひ路</div><div class="st-low">人めよくらむ</div></div><div class="st-author">藤原敏行朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">住吉の岸へ波が寄るように、夜もあなたを思う。夢の中でも人目を避けるのだろうか。</p>
+ </div></details>
+<details class="st-card" id="poem-019"><summary><span class="st-number">019</span><span class="st-title">なにはがた</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">逢はでこの世を　過ぐしてよとや</div>
+ <div class="st-label">パワーワード</div><div class="st-word">浪花型、あ、派手</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">難波潟</div><div class="">みじかき葦の</div><div class="">ふしの間も</div><div class="st-low">逢はでこの世を</div><div class="st-low">過ぐしてよとや</div></div><div class="st-author">伊勢</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">短い葦の節の間ほどの時間さえ会わずに、私はこの世を過ごせというのか。</p>
+ </div></details>
+<details class="st-card" id="poem-020"><summary><span class="st-number">020</span><span class="st-title">わびぬれば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">身をつくしても　逢はむとぞ思ふ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">詫び濡れ場、身を尽くしても <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">わびぬれば</div><div class="">今はた同じ</div><div class="">難波なる</div><div class="st-low">身をつくしても</div><div class="st-low">逢はむとぞ思ふ</div></div><div class="st-author">元良親王</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">苦しさはもう限界だ。身を滅ぼすことになっても、あなたに会いたい。</p>
+ </div></details></section><section id="group-21" class="st-group"><h2>21〜40番</h2><details class="st-card" id="poem-021"><summary><span class="st-number">021</span><span class="st-title">いまこむと</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">有明の月を　待ち出でつるかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">居間混むと、アリ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">今来むと</div><div class="">いひしばかりに</div><div class="">長月の</div><div class="st-low">有明の月を</div><div class="st-low">待ち出でつるかな</div></div><div class="st-author">素性法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">「すぐ行く」と言った人を待ち続け、とうとう九月の夜明けの月を見るまでになった。</p>
+ </div></details>
+<details class="st-card" id="poem-022"><summary><span class="st-number">022</span><span class="st-title">ふくからに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">むべ山風を　嵐といふらむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">不合格は無勉 <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">吹くからに</div><div class="">秋の草木の</div><div class="">しをるれば</div><div class="st-low">むべ山風を</div><div class="st-low">嵐といふらむ</div></div><div class="st-author">文屋康秀</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">吹いた途端に草木をしおれさせるのだから、山からの風を「嵐」と呼ぶのももっともだ。</p>
+ </div></details>
+<details class="st-card" id="poem-023"><summary><span class="st-number">023</span><span class="st-title">つきみれば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">わが身ひとつの　秋にはあらねど</div>
+ <div class="st-label">パワーワード</div><div class="st-word">月見れば、わっ、蛾見、ひとつの <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">月見れば</div><div class="">千々に物こそ</div><div class="">悲しけれ</div><div class="st-low">わが身ひとつの</div><div class="st-low">秋にはあらねど</div></div><div class="st-author">大江千里</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">月を見ると、さまざまなことが悲しい。秋は私一人にだけ来たわけではないのに。</p>
+ </div></details>
+<details class="st-card" id="poem-024"><summary><span class="st-number">024</span><span class="st-title">このたびは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">紅葉の錦　神のまにまに</div>
+ <div class="st-label">パワーワード</div><div class="st-word">この度は、もみ消し</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">このたびは</div><div class="">幣もとりあへず</div><div class="">手向山</div><div class="st-low">紅葉の錦</div><div class="st-low">神のまにまに</div></div><div class="st-author">菅家</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">今回の旅には神への供え物を用意できなかった。この美しい紅葉を代わりにお受け取りください。</p>
+ </div></details>
+<details class="st-card" id="poem-025"><summary><span class="st-number">025</span><span class="st-title">なにしおはば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人に知られで　来るよしもがな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">何塩は？ 人に知られで <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">名にしおはば</div><div class="">逢坂山の</div><div class="">さねかづら</div><div class="st-low">人に知られで</div><div class="st-low">来るよしもがな</div></div><div class="st-author">三条右大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">「逢坂山のさねかずら」という名の通り、人に知られずあなたのもとへ行く方法がほしい。</p>
+ </div></details>
+<details class="st-card" id="poem-026"><summary><span class="st-number">026</span><span class="st-title">をぐらやま</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">今ひとたびの　行幸待たなむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">小倉山、今、人、足袋のみ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">小倉山</div><div class="">峰のもみぢ葉</div><div class="">心あらば</div><div class="st-low">今ひとたびの</div><div class="st-low">行幸待たなむ</div></div><div class="st-author">貞信公</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">小倉山の紅葉よ、心があるなら、天皇がもう一度訪れるまで散らずに待っていてほしい。</p>
+ </div></details>
+<details class="st-card" id="poem-027"><summary><span class="st-number">027</span><span class="st-title">みかのはら</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いつ見きとてか　恋しかるらむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">ミカの腹、いつ見た？</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">みかの原</div><div class="">わきて流るる</div><div class="">泉川</div><div class="st-low">いつ見きとてか</div><div class="st-low">恋しかるらむ</div></div><div class="st-author">中納言兼輔</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">泉川は私たちを隔てて流れる。まだ会ったこともないのに、なぜこんなに恋しいのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-028"><summary><span class="st-number">028</span><span class="st-title">やまざとは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人目も草も　枯れぬと思へば</div>
+ <div class="st-label">パワーワード</div><div class="st-word">山ザル、ひと目も臭っ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">山里は</div><div class="">冬ぞ寂しさ</div><div class="">まさりける</div><div class="st-low">人目も草も</div><div class="st-low">枯れぬと思へば</div></div><div class="st-author">源宗于朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">山里は冬になるといっそう寂しい。訪れる人も草木もすっかり絶えてしまうから。</p>
+ </div></details>
+<details class="st-card" id="poem-029"><summary><span class="st-number">029</span><span class="st-title">こころあてに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">置きまどはせる　白菊の花</div>
+ <div class="st-label">パワーワード</div><div class="st-word">心当たりのおなら <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">心あてに</div><div class="">折らばや折らむ</div><div class="">初霜の</div><div class="st-low">置きまどはせる</div><div class="st-low">白菊の花</div></div><div class="st-author">凡河内躬恒</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">初霜と見分けがつかないほど白い菊の花を、当てずっぽうに折ってみようか。</p>
+ </div></details>
+<details class="st-card" id="poem-030"><summary><span class="st-number">030</span><span class="st-title">ありあけの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">暁ばかり　憂きものはなし</div>
+ <div class="st-label">パワーワード</div><div class="st-word">有明の、垢付きばかり</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">有明の</div><div class="">つれなく見えし</div><div class="">別れより</div><div class="st-low">暁ばかり</div><div class="st-low">憂きものはなし</div></div><div class="st-author">壬生忠岑</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">冷たい別れを経験して以来、夜明けほどつらく感じるものはない。</p>
+ </div></details>
+<details class="st-card" id="poem-031"><summary><span class="st-number">031</span><span class="st-title">あさぼらけ　ありあけ</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">吉野の里に　降れる白雪</div>
+ <div class="st-label">パワーワード</div><div class="st-word">朝、ほら、毛あり！ヨシ！</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">朝ぼらけ</div><div class="">有明の月と</div><div class="">見るまでに</div><div class="st-low">吉野の里に</div><div class="st-low">降れる白雪</div></div><div class="st-author">坂上是則</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">夜明けの雪景色は、有明の月明かりかと思うほど吉野の里を白く染めている。</p>
+ </div></details>
+<details class="st-card" id="poem-032"><summary><span class="st-number">032</span><span class="st-title">やまがはに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">流れもあへぬ　紅葉なりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">山川に、流れモアイ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">山川に</div><div class="">風のかけたる</div><div class="">しがらみは</div><div class="st-low">流れもあへぬ</div><div class="st-low">紅葉なりけり</div></div><div class="st-author">春道列樹</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">山の川をせき止めているのは、風が吹き集め、流れ切れずにたまった紅葉だった。</p>
+ </div></details>
+<details class="st-card" id="poem-033"><summary><span class="st-number">033</span><span class="st-title">ひさかたの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">静心なく　花の散るらむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">久本、静かに！ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">ひさかたの</div><div class="">光のどけき</div><div class="">春の日に</div><div class="st-low">静心なく</div><div class="st-low">花の散るらむ</div></div><div class="st-author">紀友則</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">こんなにのどかな春の日なのに、桜の花はどうして落ち着きなく散っていくのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-034"><summary><span class="st-number">034</span><span class="st-title">たれをかも</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">松も昔の　友ならなくに</div>
+ <div class="st-label">パワーワード</div><div class="st-word">タレを鴨、まず揉む</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">誰をかも</div><div class="">知る人にせむ</div><div class="">高砂の</div><div class="st-low">松も昔の</div><div class="st-low">友ならなくに</div></div><div class="st-author">藤原興風</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">誰を昔からの友と呼べばよいのだろう。高砂の松でさえ、私の古い友ではない。</p>
+ </div></details>
+<details class="st-card" id="poem-035"><summary><span class="st-number">035</span><span class="st-title">ひとはいさ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">花ぞ昔の　香に匂ひける</div>
+ <div class="st-label">パワーワード</div><div class="st-word">人はいさ、歯なぞ昔の</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">人はいさ</div><div class="">心も知らず</div><div class="">ふるさとは</div><div class="st-low">花ぞ昔の</div><div class="st-low">香に匂ひける</div></div><div class="st-author">紀貫之</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">人の心は変わったかもしれない。でも故郷の梅の花は、昔と同じ香りがする。</p>
+ </div></details>
+<details class="st-card" id="poem-036"><summary><span class="st-number">036</span><span class="st-title">なつのよは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">雲のいづこに　月宿るらむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">夏の夜は、蜘蛛の、いずこに？</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">夏の夜は</div><div class="">まだ宵ながら</div><div class="">明けぬるを</div><div class="st-low">雲のいづこに</div><div class="st-low">月宿るらむ</div></div><div class="st-author">清原深養父</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">短い夏の夜はもう明けてしまった。月は雲のどこに隠れて泊まっているのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-037"><summary><span class="st-number">037</span><span class="st-title">しらつゆに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">つらぬきとめぬ　玉ぞ散りける</div>
+ <div class="st-label">パワーワード</div><div class="st-word">しらふ、つらい</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">白露に</div><div class="">風の吹きしく</div><div class="">秋の野は</div><div class="st-low">つらぬきとめぬ</div><div class="st-low">玉ぞ散りける</div></div><div class="st-author">文屋朝康</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">露をのせた秋の野に風が吹き、糸を通していない真珠のような露が散っている。</p>
+ </div></details>
+<details class="st-card" id="poem-038"><summary><span class="st-number">038</span><span class="st-title">わすらるる</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人の命の　惜しくもあるかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">わっ、ズラ！人の</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">忘らるる</div><div class="">身をば思はず</div><div class="">誓ひてし</div><div class="st-low">人の命の</div><div class="st-low">惜しくもあるかな</div></div><div class="st-author">右近</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">忘れられる自分は構わない。でも約束を破ったあの人に天罰が下るのが心配だ。</p>
+ </div></details>
+<details class="st-card" id="poem-039"><summary><span class="st-number">039</span><span class="st-title">あさぢふの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">あまりてなどか　人の恋しき</div>
+ <div class="st-label">パワーワード</div><div class="st-word">朝ジムの余り肉</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">浅茅生の</div><div class="">小野の篠原</div><div class="">忍ぶれど</div><div class="st-low">あまりてなどか</div><div class="st-low">人の恋しき</div></div><div class="st-author">参議等</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">気持ちを隠しているつもりでも、どうしてこんなにあの人が恋しくなるのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-040"><summary><span class="st-number">040</span><span class="st-title">しのぶれど</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">物や思ふと　人の問ふまで</div>
+ <div class="st-label">パワーワード</div><div class="st-word">忍びのものもらい <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">忍ぶれど</div><div class="">色に出でにけり</div><div class="">わが恋は</div><div class="st-low">物や思ふと</div><div class="st-low">人の問ふまで</div></div><div class="st-author">平兼盛</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">恋心を隠していたのに、顔に出てしまった。人に「恋の悩みですか」と聞かれるほどに。</p>
+ </div></details></section><section id="group-41" class="st-group"><h2>41〜60番</h2><details class="st-card" id="poem-041"><summary><span class="st-number">041</span><span class="st-title">こひすてふ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人知れずこそ　思ひそめしか</div>
+ <div class="st-label">パワーワード</div><div class="st-word">濃い酢ちょい、人知れず</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">恋すてふ</div><div class="">わが名はまだき</div><div class="">立ちにけり</div><div class="st-low">人知れずこそ</div><div class="st-low">思ひそめしか</div></div><div class="st-author">壬生忠見</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">人知れず恋し始めたのに、私が恋をしているという噂がもう広まってしまった。</p>
+ </div></details>
+<details class="st-card" id="poem-042"><summary><span class="st-number">042</span><span class="st-title">ちぎりきな</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">末の松山　波越さじとは</div>
+ <div class="st-label">パワーワード</div><div class="st-word">千切り器、ナス</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">契りきな</div><div class="">かたみに袖を</div><div class="">しぼりつつ</div><div class="st-low">末の松山</div><div class="st-low">波越さじとは</div></div><div class="st-author">清原元輔</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">涙で袖を絞りながら、あの波が末の松山を越えないように心変わりしないと約束したのに。</p>
+ </div></details>
+<details class="st-card" id="poem-043"><summary><span class="st-number">043</span><span class="st-title">あひみての</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">昔は物を　思はざりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">愛、見て、ムカッ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">逢ひ見ての</div><div class="">後の心に</div><div class="">くらぶれば</div><div class="st-low">昔は物を</div><div class="st-low">思はざりけり</div></div><div class="st-author">権中納言敦忠</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">恋人に会った後の切なさと比べれば、会う前は恋の悩みなど知らなかったようなものだ。</p>
+ </div></details>
+<details class="st-card" id="poem-044"><summary><span class="st-number">044</span><span class="st-title">あふことの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人をも身をも　恨みざらまし</div>
+ <div class="st-label">パワーワード</div><div class="st-word">王、琴の人を揉み</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">逢ふことの</div><div class="">絶えてしなくは</div><div class="">なかなかに</div><div class="st-low">人をも身をも</div><div class="st-low">恨みざらまし</div></div><div class="st-author">中納言朝忠</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">いっそ出会わなければ、相手のことも自分のことも恨まずにすんだだろうに。</p>
+ </div></details>
+<details class="st-card" id="poem-045"><summary><span class="st-number">045</span><span class="st-title">あはれとも</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">身のいたづらに　なりぬべきかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">哀れ友、見抜いたズラ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">あはれとも</div><div class="">いふべき人は</div><div class="">思ほえで</div><div class="st-low">身のいたづらに</div><div class="st-low">なりぬべきかな</div></div><div class="st-author">謙徳公</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">かわいそうだと言ってくれる人も思い当たらず、むなしく命が終わってしまいそうだ。</p>
+ </div></details>
+<details class="st-card" id="poem-046"><summary><span class="st-number">046</span><span class="st-title">ゆらのとを</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">ゆくへも知らぬ　恋の道かな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">由良の門を、行く屁も知らぬ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">由良の門を</div><div class="">渡る舟人</div><div class="">かぢを絶え</div><div class="st-low">ゆくへも知らぬ</div><div class="st-low">恋の道かな</div></div><div class="st-author">曽禰好忠</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">舵を失った舟のように、私の恋がどこへ向かうのかまったく分からない。</p>
+ </div></details>
+<details class="st-card" id="poem-047"><summary><span class="st-number">047</span><span class="st-title">やへむぐら</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人こそ見えね　秋は来にけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">や、えっ、モグラ!? 人こそ見えねぇ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">八重葎</div><div class="">茂れる宿の</div><div class="">さびしきに</div><div class="st-low">人こそ見えね</div><div class="st-low">秋は来にけり</div></div><div class="st-author">恵慶法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">人の訪れない荒れた家にも、秋だけはちゃんとやって来た。</p>
+ </div></details>
+<details class="st-card" id="poem-048"><summary><span class="st-number">048</span><span class="st-title">かぜをいたみ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">くだけて物を　思ふころかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">風邪、老いた身、砕けて</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">風をいたみ</div><div class="">岩うつ波の</div><div class="">おのれのみ</div><div class="st-low">くだけて物を</div><div class="st-low">思ふころかな</div></div><div class="st-author">源重之</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">岩に打ちつけられて砕ける波のように、私だけが心を砕いて恋に悩んでいる。</p>
+ </div></details>
+<details class="st-card" id="poem-049"><summary><span class="st-number">049</span><span class="st-title">みかきもり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">昼は消えつつ　物をこそ思へ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">見ぃ、牡蠣盛り、昼吐き</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">みかきもり</div><div class="">衛士のたく火の</div><div class="">夜は燃え</div><div class="st-low">昼は消えつつ</div><div class="st-low">物をこそ思へ</div></div><div class="st-author">大中臣能宣朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">衛士の火が夜に燃え昼に消えるように、私も夜は恋心を燃やし、昼は胸に秘めている。</p>
+ </div></details>
+<details class="st-card" id="poem-050"><summary><span class="st-number">050</span><span class="st-title">きみがため　をしから</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">長くもがなと　思ひけるかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">君がため、お尻から長く</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">君がため</div><div class="">惜しからざりし</div><div class="">命さへ</div><div class="st-low">長くもがなと</div><div class="st-low">思ひけるかな</div></div><div class="st-author">藤原義孝</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">あなたのためなら惜しくなかった命なのに、会えた今では長生きしたくなった。</p>
+ </div></details>
+<details class="st-card" id="poem-051"><summary><span class="st-number">051</span><span class="st-title">かくとだに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">さしも知らじな　燃ゆる思ひを</div>
+ <div class="st-label">パワーワード</div><div class="st-word">掻くとダニ、刺し虫</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">かくとだに</div><div class="">えやはいぶきの</div><div class="">さしも草</div><div class="st-low">さしも知らじな</div><div class="st-low">燃ゆる思ひを</div></div><div class="st-author">藤原実方朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">これほどあなたを愛しているとは口に出せない。激しく燃えるこの思いを知らないでしょう。</p>
+ </div></details>
+<details class="st-card" id="poem-052"><summary><span class="st-number">052</span><span class="st-title">あけぬれば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">なほ恨めしき　朝ぼらけかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">開けぬれば、な、ほうら飯</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">明けぬれば</div><div class="">暮るるものとは</div><div class="">知りながら</div><div class="st-low">なほ恨めしき</div><div class="st-low">朝ぼらけかな</div></div><div class="st-author">藤原道信朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">また夜になると分かっていても、あなたと別れる朝が来るのは恨めしい。</p>
+ </div></details>
+<details class="st-card" id="poem-053"><summary><span class="st-number">053</span><span class="st-title">なげきつつ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いかに久しき　ものとかは知る</div>
+ <div class="st-label">パワーワード</div><div class="st-word">投げキッス、イカに</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">嘆きつつ</div><div class="">ひとり寝る夜の</div><div class="">明くる間は</div><div class="st-low">いかに久しき</div><div class="st-low">ものとかは知る</div></div><div class="st-author">右大将道綱母</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">一人で嘆きながら寝る夜が明けるまで、どれほど長く感じるかあなたには分かるまい。</p>
+ </div></details>
+<details class="st-card" id="poem-054"><summary><span class="st-number">054</span><span class="st-title">わすれじの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">今日を限りの　命ともがな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">忘れ痔の、今日を限り <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">忘れじの</div><div class="">行く末までは</div><div class="">難ければ</div><div class="st-low">今日を限りの</div><div class="st-low">命ともがな</div></div><div class="st-author">儀同三司母</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">「忘れない」という約束がいつまでも続くとは思えない。幸せな今日のうちに死にたいほどだ。</p>
+ </div></details>
+<details class="st-card" id="poem-055"><summary><span class="st-number">055</span><span class="st-title">たきのおとは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">名こそ流れて　なほ聞こえけれ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">滝の夫は、名古屋流れて</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">滝の音は</div><div class="">絶えて久しく</div><div class="">なりぬれど</div><div class="st-low">名こそ流れて</div><div class="st-low">なほ聞こえけれ</div></div><div class="st-author">大納言公任</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">滝の音はずっと昔に絶えたけれど、その名声は今も流れ伝わって聞こえてくる。</p>
+ </div></details>
+<details class="st-card" id="poem-056"><summary><span class="st-number">056</span><span class="st-title">あらざらむ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いまひとたびの　逢ふこともがな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">あら、ザラメ、今ひとたびの炙り</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">あらざらむ</div><div class="">この世のほかの</div><div class="">思ひ出に</div><div class="st-low">いまひとたびの</div><div class="st-low">逢ふこともがな</div></div><div class="st-author">和泉式部</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">もうすぐ死ぬ私に、この世の最後の思い出として、もう一度だけあなたに会わせてほしい。</p>
+ </div></details>
+<details class="st-card" id="poem-057"><summary><span class="st-number">057</span><span class="st-title">めぐりあひて</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">雲がくれにし　夜半の月かな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">めぐり相手、雲隠れ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">めぐり逢ひて</div><div class="">見しやそれとも</div><div class="">わかぬ間に</div><div class="st-low">雲がくれにし</div><div class="st-low">夜半の月かな</div></div><div class="st-author">紫式部</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">久々に会った友は、確かめる間もなく雲に隠れた月のように去ってしまった。</p>
+ </div></details>
+<details class="st-card" id="poem-058"><summary><span class="st-number">058</span><span class="st-title">ありまやま</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いでそよ人を　忘れやはする</div>
+ <div class="st-label">パワーワード</div><div class="st-word">蟻、まぁ山！いでっ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">有馬山</div><div class="">猪名の笹原</div><div class="">風吹けば</div><div class="st-low">いでそよ人を</div><div class="st-low">忘れやはする</div></div><div class="st-author">大弐三位</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">有馬山から吹く風が笹をそよがせる。そう、その通り。私があなたを忘れるはずはない。</p>
+ </div></details>
+<details class="st-card" id="poem-059"><summary><span class="st-number">059</span><span class="st-title">やすらはで</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">かたぶくまでの　月を見しかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">ヤスらは堅物 <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">やすらはで</div><div class="">寝なましものを</div><div class="">さ夜更けて</div><div class="st-low">かたぶくまでの</div><div class="st-low">月を見しかな</div></div><div class="st-author">赤染衛門</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">ためらわず寝ればよかったのに、来ない人を待って月が傾くまで起きていた。</p>
+ </div></details>
+<details class="st-card" id="poem-060"><summary><span class="st-number">060</span><span class="st-title">おほえやま</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">まだふみも見ず　天の橋立</div>
+ <div class="st-label">パワーワード</div><div class="st-word">おお、絵や！まだ踏みも見ず</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">大江山</div><div class="">いく野の道の</div><div class="">遠ければ</div><div class="st-low">まだふみも見ず</div><div class="st-low">天の橋立</div></div><div class="st-author">小式部内侍</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">大江山を越える道は遠いので、天の橋立にはまだ行ってもいないし、母の手紙も見ていない。</p>
+ </div></details></section><section id="group-61" class="st-group"><h2>61〜80番</h2><details class="st-card" id="poem-061"><summary><span class="st-number">061</span><span class="st-title">いにしへの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">けふ九重に　匂ひぬるかな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">いにしえの京子、この絵に <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">いにしへの</div><div class="">奈良の都の</div><div class="">八重桜</div><div class="st-low">けふ九重に</div><div class="st-low">匂ひぬるかな</div></div><div class="st-author">伊勢大輔</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">昔の奈良の八重桜が、今日は宮中で美しく咲き誇っていることよ。</p>
+ </div></details>
+<details class="st-card" id="poem-062"><summary><span class="st-number">062</span><span class="st-title">よをこめて</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">世に逢坂の　関はゆるさじ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">ヨーコ、目で「夜に会うさ」</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">夜をこめて</div><div class="">鳥のそら音は</div><div class="">はかるとも</div><div class="st-low">世に逢坂の</div><div class="st-low">関はゆるさじ</div></div><div class="st-author">清少納言</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">夜明け前に鶏の鳴きまねをしても、逢坂の関の門は決して開けませんよ。</p>
+ </div></details>
+<details class="st-card" id="poem-063"><summary><span class="st-number">063</span><span class="st-title">いまはただ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人づてならで　いふよしもがな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">今はタダ、人妻なら</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">今はただ</div><div class="">思ひ絶えなむ</div><div class="">とばかりを</div><div class="st-low">人づてならで</div><div class="st-low">いふよしもがな</div></div><div class="st-author">左京大夫道雅</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">別れを決意したと、せめて人づてでなく直接あなたに伝える方法があればいいのに。</p>
+ </div></details>
+<details class="st-card" id="poem-064"><summary><span class="st-number">064</span><span class="st-title">あさぼらけ　うぢの</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">あらはれわたる　瀬々の網代木</div>
+ <div class="st-label">パワーワード</div><div class="st-word">朝ぼらけ、蛆の現れわたる</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">朝ぼらけ</div><div class="">宇治の川霧</div><div class="">たえだえに</div><div class="st-low">あらはれわたる</div><div class="st-low">瀬々の網代木</div></div><div class="st-author">権中納言定頼</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">夜明けの宇治川では霧が切れ切れになり、川のあちこちに網代木が姿を見せている。</p>
+ </div></details>
+<details class="st-card" id="poem-065"><summary><span class="st-number">065</span><span class="st-title">うらみわび</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">恋に朽ちなむ　名こそ惜しけれ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">恨み詫び、濃い肉</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">恨みわび</div><div class="">ほさぬ袖だに</div><div class="">あるものを</div><div class="st-low">恋に朽ちなむ</div><div class="st-low">名こそ惜しけれ</div></div><div class="st-author">相模</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">恨み疲れ、涙で袖が乾かない。この恋のせいで評判まで傷つくのが惜しい。</p>
+ </div></details>
+<details class="st-card" id="poem-066"><summary><span class="st-number">066</span><span class="st-title">もろともに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">花よりほかに　知る人もなし</div>
+ <div class="st-label">パワーワード</div><div class="st-word">もろともに、花より団子 <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">もろともに</div><div class="">あはれと思へ</div><div class="">山桜</div><div class="st-low">花よりほかに</div><div class="st-low">知る人もなし</div></div><div class="st-author">前大僧正行尊</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">山桜よ、私と互いに愛おしみ合おう。ここにはお前のほかに私を知る人はいない。</p>
+ </div></details>
+<details class="st-card" id="poem-067"><summary><span class="st-number">067</span><span class="st-title">はるのよの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">かひなく立たむ　名こそ惜しけれ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">張るのよ、甲斐なく畳む</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">春の夜の</div><div class="">夢ばかりなる</div><div class="">手枕に</div><div class="st-low">かひなく立たむ</div><div class="st-low">名こそ惜しけれ</div></div><div class="st-author">周防内侍</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">春の夜の夢ほどはかない手枕のために、つまらない噂が立つのは残念だ。</p>
+ </div></details>
+<details class="st-card" id="poem-068"><summary><span class="st-number">068</span><span class="st-title">こころにも</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">恋しかるべき　夜半の月かな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">心にも小石</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">心にも</div><div class="">あらでうき世に</div><div class="">ながらへば</div><div class="st-low">恋しかるべき</div><div class="st-low">夜半の月かな</div></div><div class="st-author">三条院</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">望まずしてこの世に生き長らえたら、今夜の月を恋しく思い出すのだろう。</p>
+ </div></details>
+<details class="st-card" id="poem-069"><summary><span class="st-number">069</span><span class="st-title">あらしふく</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">竜田の川の　錦なりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">あら、至福、竜田の皮</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">嵐吹く</div><div class="">三室の山の</div><div class="">もみぢ葉は</div><div class="st-low">竜田の川の</div><div class="st-low">錦なりけり</div></div><div class="st-author">能因法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">三室山の紅葉が嵐で散り、竜田川の水面を錦織りのように飾っている。</p>
+ </div></details>
+<details class="st-card" id="poem-070"><summary><span class="st-number">070</span><span class="st-title">さびしさに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いづくも同じ　秋の夕暮れ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">寂しさに、伊豆籠もり <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">さびしさに</div><div class="">宿を立ち出でて</div><div class="">ながむれば</div><div class="st-low">いづくも同じ</div><div class="st-low">秋の夕暮れ</div></div><div class="st-author">良暹法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">寂しくて外へ出て眺めたけれど、どこも同じ寂しい秋の夕暮れだった。</p>
+ </div></details>
+<details class="st-card" id="poem-071"><summary><span class="st-number">071</span><span class="st-title">ゆふされば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">蘆のまろやに　秋風ぞ吹く</div>
+ <div class="st-label">パワーワード</div><div class="st-word">夕されば足のまめ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">夕されば</div><div class="">門田の稲葉</div><div class="">おとづれて</div><div class="st-low">蘆のまろやに</div><div class="st-low">秋風ぞ吹く</div></div><div class="st-author">大納言経信</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">夕方、田んぼの稲葉を揺らして、葦ぶきの小屋に秋風が吹き込んでくる。</p>
+ </div></details>
+<details class="st-card" id="poem-072"><summary><span class="st-number">072</span><span class="st-title">おとにきく</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">かけじや袖の　濡れもこそすれ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">夫に効く？賭けじゃ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">音に聞く</div><div class="">高師の浜の</div><div class="">あだ波は</div><div class="st-low">かけじや袖の</div><div class="st-low">濡れもこそすれ</div></div><div class="st-author">祐子内親王家紀伊</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">評判に聞く高師の浜の荒波のような浮気な人には心を寄せまい。涙で袖が濡れるから。</p>
+ </div></details>
+<details class="st-card" id="poem-073"><summary><span class="st-number">073</span><span class="st-title">たかさごの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">外山の霞　立たずもあらなむ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">高砂の、富山のかすみ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">高砂の</div><div class="">尾上の桜</div><div class="">咲きにけり</div><div class="st-low">外山の霞</div><div class="st-low">立たずもあらなむ</div></div><div class="st-author">前権中納言匡房</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">高砂の山の桜が咲いた。近くの山の霞よ、花を隠さないでほしい。</p>
+ </div></details>
+<details class="st-card" id="poem-074"><summary><span class="st-number">074</span><span class="st-title">うかりける</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">はげしかれとは　祈らぬものを</div>
+ <div class="st-label">パワーワード</div><div class="st-word">うっかりハゲ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">憂かりける</div><div class="">人を初瀬の</div><div class="">山おろしよ</div><div class="st-low">はげしかれとは</div><div class="st-low">祈らぬものを</div></div><div class="st-author">源俊頼朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">冷たいあの人の心が変わるよう祈ったけれど、こんな激しい山風を願ったわけではない。</p>
+ </div></details>
+<details class="st-card" id="poem-075"><summary><span class="st-number">075</span><span class="st-title">ちぎりおきし</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">あはれ今年の　秋もいぬめり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">契り起きし、あ、晴れ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">契りおきし</div><div class="">させもが露を</div><div class="">命にて</div><div class="st-low">あはれ今年の</div><div class="st-low">秋もいぬめり</div></div><div class="st-author">藤原基俊</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">頼りにしていた約束の露もむなしく、今年の秋も過ぎようとしている。</p>
+ </div></details>
+<details class="st-card" id="poem-076"><summary><span class="st-number">076</span><span class="st-title">わたのはら　こぎいでて</span><span class="st-dupe">6文字決まり</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">雲居にまがふ　沖つ白波</div>
+ <div class="st-label">パワーワード</div><div class="st-word">綿の腹、子蜘蛛いる</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">わたの原</div><div class="">漕ぎ出でて見れば</div><div class="">久方の</div><div class="st-low">雲居にまがふ</div><div class="st-low">沖つ白波</div></div><div class="st-author">法性寺入道前関白太政大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">大海原へ漕ぎ出すと、遠い雲と見間違うほど白い沖の波が見える。</p>
+ </div></details>
+<details class="st-card" id="poem-077"><summary><span class="st-number">077</span><span class="st-title">せをはやみ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">われても末に　逢はむとぞ思ふ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">セクシー割れアゴ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">瀬を早み</div><div class="">岩にせかるる</div><div class="">滝川の</div><div class="st-low">われても末に</div><div class="st-low">逢はむとぞ思ふ</div></div><div class="st-author">崇徳院</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">速い川が岩で分かれてもまた合流するように、別れてもいつか必ずあなたに会いたい。</p>
+ </div></details>
+<details class="st-card" id="poem-078"><summary><span class="st-number">078</span><span class="st-title">あはぢしま</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">いく夜寝覚めぬ　須磨の関守</div>
+ <div class="st-label">パワーワード</div><div class="st-word">淡路島、行くよ、寝覚めぬ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">淡路島</div><div class="">通ふ千鳥の</div><div class="">鳴く声に</div><div class="st-low">いく夜寝覚めぬ</div><div class="st-low">須磨の関守</div></div><div class="st-author">源兼昌</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">淡路島へ通う千鳥の声を聞いて、須磨の関守は幾晩眠りを妨げられただろう。</p>
+ </div></details>
+<details class="st-card" id="poem-079"><summary><span class="st-number">079</span><span class="st-title">あきかぜに</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">もれ出づる月の　影のさやけさ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">秋、風邪に漏れ、ずるっ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">秋風に</div><div class="">たなびく雲の</div><div class="">絶え間より</div><div class="st-low">もれ出づる月の</div><div class="st-low">影のさやけさ</div></div><div class="st-author">左京大夫顕輔</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">秋風になびく雲の切れ間から、澄みきった月の光がもれてくる。</p>
+ </div></details>
+<details class="st-card" id="poem-080"><summary><span class="st-number">080</span><span class="st-title">ながからむ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">乱れて今朝は　物をこそ思へ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">長カツラ、乱れて</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">長からむ</div><div class="">心も知らず</div><div class="">黒髪の</div><div class="st-low">乱れて今朝は</div><div class="st-low">物をこそ思へ</div></div><div class="st-author">待賢門院堀河</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">あなたの心が長続きするか分からず、黒髪のように心が乱れて今朝は悩んでいる。</p>
+ </div></details></section><section id="group-81" class="st-group"><h2>81〜100番</h2><details class="st-card" id="poem-081"><summary><span class="st-number">081</span><span class="st-title">ほととぎす</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">ただ有明の　月ぞ残れる</div>
+ <div class="st-label">パワーワード</div><div class="st-word">ホトトギス、タダ・アリア</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">ほととぎす</div><div class="">鳴きつる方を</div><div class="">ながむれば</div><div class="st-low">ただ有明の</div><div class="st-low">月ぞ残れる</div></div><div class="st-author">後徳大寺左大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">ほととぎすの声がした方を眺めたら、夜明けの空には月だけが残っていた。</p>
+ </div></details>
+<details class="st-card" id="poem-082"><summary><span class="st-number">082</span><span class="st-title">おもひわび</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">憂きに堪へぬは　涙なりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">重いわ！浮きに耐えぬは</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">思ひわび</div><div class="">さても命は</div><div class="">あるものを</div><div class="st-low">憂きに堪へぬは</div><div class="st-low">涙なりけり</div></div><div class="st-author">道因法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">恋に苦しんでも生きてはいる。ただ、つらさに耐えられず涙だけが止まらない。</p>
+ </div></details>
+<details class="st-card" id="poem-083"><summary><span class="st-number">083</span><span class="st-title">よのなかよ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">山の奥にも　鹿ぞ鳴くなる</div>
+ <div class="st-label">パワーワード</div><div class="st-word">夜の仲よ、山の奥にも <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">世の中よ</div><div class="">道こそなけれ</div><div class="">思ひ入る</div><div class="st-low">山の奥にも</div><div class="st-low">鹿ぞ鳴くなる</div></div><div class="st-author">皇太后宮大夫俊成</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">世の中から逃れる道はない。山奥に入っても鹿が悲しげに鳴いている。</p>
+ </div></details>
+<details class="st-card" id="poem-084"><summary><span class="st-number">084</span><span class="st-title">ながらへば</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">憂しと見し世ぞ　今は恋しき</div>
+ <div class="st-label">パワーワード</div><div class="st-word">長良、餌場、鵜匠</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">ながらへば</div><div class="">またこのごろや</div><div class="">しのばれむ</div><div class="st-low">憂しと見し世ぞ</div><div class="st-low">今は恋しき</div></div><div class="st-author">藤原清輔朝臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">生き長らえれば、今のつらさも懐かしくなるのだろう。昔つらかった日々が今は恋しいように。</p>
+ </div></details>
+<details class="st-card" id="poem-085"><summary><span class="st-number">085</span><span class="st-title">よもすがら</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">閨のひまさへ　つれなかりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">夜もすがら？寝や！</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">夜もすがら</div><div class="">物思ふころは</div><div class="">明けやらで</div><div class="st-low">閨のひまさへ</div><div class="st-low">つれなかりけり</div></div><div class="st-author">俊恵法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">物思いで眠れない夜は、寝室の戸の隙間さえ夜明けを知らせてくれず冷たい。</p>
+ </div></details>
+<details class="st-card" id="poem-086"><summary><span class="st-number">086</span><span class="st-title">なげけとて</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">かこち顔なる　わが涙かな</div>
+ <div class="st-label">パワーワード</div><div class="st-word">投げけとて、籠ちがう！</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">嘆けとて</div><div class="">月やは物を</div><div class="">思はする</div><div class="st-low">かこち顔なる</div><div class="st-low">わが涙かな</div></div><div class="st-author">西行法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">月が私を悲しませるわけでもないのに、月のせいにするように涙がこぼれる。</p>
+ </div></details>
+<details class="st-card" id="poem-087"><summary><span class="st-number">087</span><span class="st-title">むらさめの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">霧立ちのぼる　秋の夕暮れ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">村雨の斬り太刀</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">村雨の</div><div class="">露もまだひぬ</div><div class="">槙の葉に</div><div class="st-low">霧立ちのぼる</div><div class="st-low">秋の夕暮れ</div></div><div class="st-author">寂蓮法師</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">にわか雨が過ぎた槙の葉には露が残り、霧が立ち昇る秋の夕暮れだ。</p>
+ </div></details>
+<details class="st-card" id="poem-088"><summary><span class="st-number">088</span><span class="st-title">なにはえの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">みをつくしてや　恋ひわたるべき</div>
+ <div class="st-label">パワーワード</div><div class="st-word">なにわエステ、身を尽くしてや</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">難波江の</div><div class="">蘆のかりねの</div><div class="">ひとよゆゑ</div><div class="st-low">みをつくしてや</div><div class="st-low">恋ひわたるべき</div></div><div class="st-author">皇嘉門院別当</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">葦の刈り寝のような短い一夜のために、一生をかけて恋い続けなければならないのか。</p>
+ </div></details>
+<details class="st-card" id="poem-089"><summary><span class="st-number">089</span><span class="st-title">たまのをよ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">忍ぶることの　弱りもぞする</div>
+ <div class="st-label">パワーワード</div><div class="st-word">タマの尾よ、忍ぶる</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">玉の緒よ</div><div class="">絶えなば絶えね</div><div class="">ながらへば</div><div class="st-low">忍ぶることの</div><div class="st-low">弱りもぞする</div></div><div class="st-author">式子内親王</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">命よ、絶えるなら絶えてしまえ。生きていると、秘密の恋心を隠しきれなくなりそうだ。</p>
+ </div></details>
+<details class="st-card" id="poem-090"><summary><span class="st-number">090</span><span class="st-title">みせばやな</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">濡れにぞ濡れし　色は変はらず</div>
+ <div class="st-label">パワーワード</div><div class="st-word">見せ場やな、濡れにぞ濡れし</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">見せばやな</div><div class="">雄島のあまの</div><div class="">袖だにも</div><div class="st-low">濡れにぞ濡れし</div><div class="st-low">色は変はらず</div></div><div class="st-author">殷富門院大輔</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">涙に濡れた私の袖を見せたい。漁師の袖と違って、涙で色まで変わってしまった。</p>
+ </div></details>
+<details class="st-card" id="poem-091"><summary><span class="st-number">091</span><span class="st-title">きりぎりす</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">衣かたしき　ひとりかも寝む</div>
+ <div class="st-label">パワーワード</div><div class="st-word">錐ギリ、衣硬し <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">きりぎりす</div><div class="">鳴くや霜夜の</div><div class="">さむしろに</div><div class="st-low">衣かたしき</div><div class="st-low">ひとりかも寝む</div></div><div class="st-author">後京極摂政前太政大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">霜の降る寒い夜、むしろの上で衣を片敷き、一人きりで眠るのだろうか。</p>
+ </div></details>
+<details class="st-card" id="poem-092"><summary><span class="st-number">092</span><span class="st-title">わがそでは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">人こそ知らね　乾く間もなし</div>
+ <div class="st-label">パワーワード</div><div class="st-word">我が袖は一個、そ知らぬ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">わが袖は</div><div class="">潮干に見えぬ</div><div class="">沖の石の</div><div class="st-low">人こそ知らね</div><div class="st-low">乾く間もなし</div></div><div class="st-author">二条院讃岐</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">海が引いても見えない沖の石のように、誰にも知られず涙で袖が乾かない。</p>
+ </div></details>
+<details class="st-card" id="poem-093"><summary><span class="st-number">093</span><span class="st-title">よのなかは</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">あまの小舟の　綱手かなしも</div>
+ <div class="st-label">パワーワード</div><div class="st-word">世の中は甘ぇのぉ</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">世の中は</div><div class="">常にもがもな</div><div class="">渚漕ぐ</div><div class="st-low">あまの小舟の</div><div class="st-low">綱手かなしも</div></div><div class="st-author">鎌倉右大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">世の中はいつまでもこのままであってほしい。岸辺を進む小舟を引く光景が愛おしい。</p>
+ </div></details>
+<details class="st-card" id="poem-094"><summary><span class="st-number">094</span><span class="st-title">みよしのの</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">ふるさと寒く　衣うつなり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">見よ、フルチン</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">み吉野の</div><div class="">山の秋風</div><div class="">さ夜更けて</div><div class="st-low">ふるさと寒く</div><div class="st-low">衣うつなり</div></div><div class="st-author">参議雅経</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">吉野の山の秋風が夜更けに吹き、古い都では寒々と衣を打つ音が聞こえる。</p>
+ </div></details>
+<details class="st-card" id="poem-095"><summary><span class="st-number">095</span><span class="st-title">おほけなく</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">わが立つ杣に　墨染の袖</div>
+ <div class="st-label">パワーワード</div><div class="st-word">大けがなく、我が立つ <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">おほけなく</div><div class="">うき世の民に</div><div class="">おほふかな</div><div class="st-low">わが立つ杣に</div><div class="st-low">墨染の袖</div></div><div class="st-author">前大僧正慈円</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">身に余ることだが、仏に仕えるこの墨染めの袖で、苦しい世の人々を包み守りたい。</p>
+ </div></details>
+<details class="st-card" id="poem-096"><summary><span class="st-number">096</span><span class="st-title">はなさそふ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">ふりゆくものは　わが身なりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">鼻刺そう、降りゆく</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">花さそふ</div><div class="">嵐の庭の</div><div class="">雪ならで</div><div class="st-low">ふりゆくものは</div><div class="st-low">わが身なりけり</div></div><div class="st-author">入道前太政大臣</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">嵐に花が雪のように散る。実際に古びていくのは花ではなく、この私自身なのだ。</p>
+ </div></details>
+<details class="st-card" id="poem-097"><summary><span class="st-number">097</span><span class="st-title">こぬひとを</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">焼くや藻塩の　身もこがれつつ</div>
+ <div class="st-label">パワーワード</div><div class="st-word">来ぬ人を焼くや</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">来ぬ人を</div><div class="">まつほの浦の</div><div class="">夕なぎに</div><div class="st-low">焼くや藻塩の</div><div class="st-low">身もこがれつつ</div></div><div class="st-author">権中納言定家</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">来ない人を待ち続け、海辺で藻塩を焼く火のように、わが身も恋に焦がれている。</p>
+ </div></details>
+<details class="st-card" id="poem-098"><summary><span class="st-number">098</span><span class="st-title">かぜそよぐ</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">みそぎぞ夏の　しるしなりける</div>
+ <div class="st-label">パワーワード</div><div class="st-word">風邪そうよ、三十路ぞ、夏の</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">風そよぐ</div><div class="">楢の小川の</div><div class="">夕暮れは</div><div class="st-low">みそぎぞ夏の</div><div class="st-low">しるしなりける</div></div><div class="st-author">従二位家隆</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">楢の小川に風がそよぐ夕暮れ。禊の行事だけが、まだ夏であることを伝えている。</p>
+ </div></details>
+<details class="st-card" id="poem-099"><summary><span class="st-number">099</span><span class="st-title">ひともをし</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">世を思ふゆゑに　物思ふ身は</div>
+ <div class="st-label">パワーワード</div><div class="st-word">人も推し、余を思うゆえに <small style="font-size:12px;color:#999">△</small></div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">人もをし</div><div class="">人も恨めし</div><div class="">あぢきなく</div><div class="st-low">世を思ふゆゑに</div><div class="st-low">物思ふ身は</div></div><div class="st-author">後鳥羽院</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">人は愛おしくも恨めしくもある。思い通りにならない世の中を考え、私は悩み続ける。</p>
+ </div></details>
+<details class="st-card" id="poem-100"><summary><span class="st-number">100</span><span class="st-title">ももしきや</span><span class="st-chevron" aria-hidden="true">›</span></summary>
+ <div class="st-result"><div class="st-label">下の句（取り札）</div><div class="st-answer">なほあまりある　昔なりけり</div>
+ <div class="st-label">パワーワード</div><div class="st-word">股引や、なお余りある</div>
+ <div class="st-label">歌の全文</div><div class="st-full"><div class="">百敷や</div><div class="">古き軒端の</div><div class="">しのぶにも</div><div class="st-low">なほあまりある</div><div class="st-low">昔なりけり</div></div><div class="st-author">順徳院</div>
+ <div class="st-label">意味（短い意訳）</div><p class="st-meaning">古い宮殿の軒に生える忍ぶ草を見ると、しのんでもしのびきれない昔が思い出される。</p>
+ </div></details></section><footer class="st-footer">語呂はご提供のv4を収録。歌の意味は学習用の簡潔な意訳です。<br>初句が同じ「わたのはら」「きみがため」「あさぼらけ」は2句目まで表示しています。</footer></div></section>
+<header class="masthead">
+ <div class="shell top"><div><div class="overline">POWER WORD × HYAKUNIN ISSHU</div><h1 class="brand">百人一首 記憶道場</h1><p class="tagline">上の句から下の句へ。奇妙な語呂で、100首をつなぐ。</p></div><div class="stamp">一首<br>一撃</div></div>
+ <div class="shell"><nav class="tabs" aria-label="画面切り替え"><button class="tab" data-tab="practice" aria-selected="true">暗記する</button><button class="tab" data-tab="library" aria-selected="false">100首一覧</button><button class="tab" data-tab="guide" aria-selected="false">使い方・保存</button></nav></div>
+</header>
+<main class="shell">
+ <section class="stats" aria-label="学習進捗"><div class="stat primary"><small>覚えた</small><b id="stat-mastered">0</b></div><div class="stat"><small>あやしい</small><b id="stat-shaky">0</b></div><div class="stat"><small>苦手</small><b id="stat-weak">0</b></div><div class="stat"><small>未学習</small><b id="stat-unseen">100</b></div></section>
+ <section id="practice-view">
+  <div class="panel control-panel"><div class="field"><label for="filter">出題範囲</label><select id="filter"><option value="all">全100首</option><option value="unmastered">まだ覚えていない札</option><option value="weak">苦手札だけ</option><option value="due">復習タイミングの札</option><option value="duplicates">大山札（6首）</option></select></div><div class="field"><label for="cue-mode">問題の見せ方</label><select id="cue-mode"><option value="short">冒頭だけ（語呂の練習）</option><option value="full">上の句3句すべて</option></select></div><div class="controls-end"><button id="shuffle" class="smallbtn active" title="出題順を変更">シャッフル ON</button><button id="restart" class="smallbtn" title="現在の範囲を最初から">最初から</button></div></div>
+  <article id="quiz" class="panel quiz" aria-live="polite"><div class="quiz-top"><div class="idmark"><span class="round" id="card-number">01</span><span class="minor" id="card-place">1 / 100 首</span></div><div id="card-badges"></div></div><div class="cue-panel"><div class="ribbon">上の句 ── 下の句は？</div><div class="cue" id="cue-text"></div><button id="expand-upper" class="more-upper">上の句を全文見る</button><div id="hintbox" class="hintbox is-hidden"><span class="hintlabel">パワーワードのヒント</span><strong id="hint-word"></strong></div></div><div id="question-buttons" class="action-row"><button id="hint-btn" class="btn btn-outline">ヒントを見る</button><button id="reveal-btn" class="btn btn-main">答えを見る</button></div>
+   <div id="answer-pane" class="answer-pane is-hidden"><div class="answer-label">下の句</div><div id="answer-text" class="answer-large"></div><div class="detail-grid"><div class="detail-box"><div class="section-head">歌 全 文</div><div id="full-poem" class="poem-full"></div><div class="writer" id="poem-author"></div></div><div class="detail-box"><div class="section-head">記憶のフック</div><div class="word-big" id="answer-word"></div><button id="edit-word-btn" class="smallbtn">語呂を自分で編集</button><div id="word-editor" class="editing is-hidden"><textarea id="word-input" aria-label="自分用の語呂"></textarea><div style="display:flex;flex-direction:column;gap:7px"><button id="save-word" class="smallbtn">保存</button><button id="reset-word" class="smallbtn">元に戻す</button></div></div><div class="section-head" style="margin-top:17px">歌の意味（やさしい意訳）</div><p id="meaning"></p></div></div><div class="score-area"><h3>下の句を思い出せた？</h3><div class="score-buttons"><button class="bad" data-score="1">× 思い出せない</button><button class="medium" data-score="2">△ あやしい</button><button class="good" data-score="3">✓ 覚えた</button></div><div class="score-footer"><span class="status" id="review-note">結果を記録すると次回の復習に反映します。</span><button id="listen" class="smallbtn" type="button">♪ 歌を読み上げる</button></div></div></div>
+   <div class="next-row"><p id="next-note">頭の音から、下の句の最初の音を思い出してください。</p><button id="next" class="btn btn-sub">次の札 →</button></div>
+  </article><div id="practice-empty" class="panel empty is-hidden"><h2>この条件に合う札はありません</h2><p>範囲を変えるか、「全100首」に戻してください。</p><button class="btn btn-main" id="show-all">全100首に戻す</button></div>
+ </section>
+ <section id="library-view" class="is-hidden"><div class="list-top"><div><h2>100首の一覧</h2><p>語呂をクリックすると、その歌を詳しく確認できます。</p></div><div class="list-toolbar"><input id="search" class="search-input" type="search" placeholder="歌・作者・語呂・番号で検索" aria-label="百人一首を検索"><select id="library-filter" aria-label="一覧の表示範囲"><option value="all">全件</option><option value="weak">苦手</option><option value="shaky">あやしい</option><option value="mastered">覚えた</option><option value="duplicates">大山札</option></select></div></div><div id="list-count" class="footnote"></div><div id="card-list" class="card-list"></div></section>
+ <section id="guide-view" class="is-hidden"><div class="panel guide"><h2>使い方・学習データ</h2><div class="guide-row"><div><h3>1. まず思い出す</h3><p>上の句の冒頭を見て、下の句を声に出すか頭の中で答えます。初句が共通する「わたのはら」「きみがため」「あさぼらけ」は、区別できるよう2句目の冒頭も出します。</p><h3>2. ヒント・答え合わせ</h3><p>思い出せなければ「ヒント」でパワーワードを表示。「答えを見る」で、下の句・歌全文・意味を確認します。語呂は<strong>添付v4の原案</strong>を保持し、自由に書き換えられます。</p><h3>3. 苦手を復習する</h3><p>「×」「△」「✓」を記録すると、苦手札だけの出題や復習タイミング順の練習ができます。初めて見る札はいつでも全100首から始められます。</p></div><div><h3>保存について</h3><p>学習結果と編集した語呂は、このブラウザーのローカル保存領域に記録します。ログインも通信も不要です。ファイルの移動、端末変更、ブラウザーのデータ削除に備えて、学習記録をJSONファイルとして書き出せます。</p><div class="data-actions"><button id="export" class="smallbtn">記録をエクスポート</button><button id="import-btn" class="smallbtn">記録をインポート</button><input id="import-file" type="file" accept="application/json,.json" hidden></div><p class="muted" id="storage-note"></p><h3>本文と訳について</h3><p>歌の表記は歴史的仮名遣いを基本とし、表記ゆれがあります。意味欄は学習用の<strong>簡潔な独自の意訳</strong>で、厳密な逐語訳ではありません。語呂は歌の本来の意味とは無関係です。</p><p>参照資料：<a href="https://hinata-ya.tech/games/hyakunin/" target="_blank" rel="noopener noreferrer">百人一首 全100首一覧（決まり字・歌全文）</a></p><p class="muted">v4の「△」は語呂の完成度に関する元資料の印です。和歌の品質や意味の問題ではありません。</p></div></div></div></section>
+ <footer class="site-footer">百人一首 記憶道場 · 100首収録 · 単一HTML / オフライン対応</footer>
+</main>
+<script>
+'use strict';
+const POEMS=[{"id":1,"cue":"あきのたの","answerCue":"わがころもでは","word":"秋の田の、我がコロも出っ歯","weak":true,"alt":"秋の田の、我が衣、出羽","lines":["秋の田の","かりほの庵の","苫をあらみ","わが衣手は","露にぬれつつ"],"author":"天智天皇","meaning":"秋の田を見張る粗末な小屋は屋根の編み目が粗く、私の袖は露に濡れてしまう。"},{"id":2,"cue":"はるすぎて","answerCue":"ころもほすてふ","word":"春過ぎて、コロも干す","weak":false,"alt":"春過ぎて、コロもホステス","lines":["春過ぎて","夏来にけらし","白妙の","衣干すてふ","天の香具山"],"author":"持統天皇","meaning":"春は過ぎて夏が来たらしい。香具山には真っ白な衣が干されているという。"},{"id":3,"cue":"あしびきの","answerCue":"ながながしよを","word":"足ビキッの、長々し夜を","weak":true,"alt":"アシカの長縄跳び","lines":["あしびきの","山鳥の尾の","しだり尾の","ながながし夜を","ひとりかも寝む"],"author":"柿本人麻呂","meaning":"山鳥の長く垂れた尾のように、長い長い夜を私は一人で眠るのだろうか。"},{"id":4,"cue":"たごのうらに","answerCue":"ふじのたかねに","word":"タコの裏にフジツボ","weak":false,"alt":"タコの裏に、富士の高値","lines":["田子の浦に","うち出でて見れば","白妙の","富士の高嶺に","雪は降りつつ"],"author":"山部赤人","meaning":"田子の浦に出て眺めると、富士山の高い峰に真っ白な雪が降り積もっている。"},{"id":5,"cue":"おくやまに","answerCue":"こゑきくときぞ","word":"お悔やみに、声聞く時ぞ","weak":true,"alt":"奥山に、肥え効く時ぞ","lines":["奥山に","紅葉踏み分け","鳴く鹿の","声聞く時ぞ","秋は悲しき"],"author":"猿丸大夫","meaning":"奥山で紅葉を踏み分けて鳴く鹿の声を聞くと、秋はなんと悲しいのだろう。"},{"id":6,"cue":"かささぎの","answerCue":"しろきをみれば","word":"傘詐欺の、シロ","weak":false,"alt":"傘詐欺の、白き尾見れば","lines":["かささぎの","渡せる橋に","置く霜の","白きを見れば","夜ぞ更けにける"],"author":"中納言家持","meaning":"かささぎが架けたといわれる天上の橋に霜が白く降り、夜が更けたことを知る。"},{"id":7,"cue":"あまのはら","answerCue":"みかさのやまに","word":"海女の腹、三笠の山に","weak":true,"alt":"雨の原、み傘の山に","lines":["天の原","ふりさけ見れば","春日なる","三笠の山に","出でし月かも"],"author":"阿倍仲麻呂","meaning":"広い空を見上げると、故郷の三笠山に昇っていたのと同じ月が見える。"},{"id":8,"cue":"わがいほは","answerCue":"よをうぢやまと","word":"我が胃オワ、用事山と","weak":false,"alt":"我が魚は、世を蛆山と","lines":["わが庵は","都のたつみ","しかぞ住む","世をうぢ山と","人はいふなり"],"author":"喜撰法師","meaning":"都の南東、宇治の山に静かに暮らしている。世を憂えて住むのだと人は言うようだ。"},{"id":9,"cue":"はなのいろは","answerCue":"わがみよにふる","word":"鼻の色は、わっ、紙よ","weak":true,"alt":"鼻の色は、我が身よ","lines":["花の色は","移りにけりな","いたづらに","わが身世にふる","ながめせし間に"],"author":"小野小町","meaning":"花の色は衰えてしまった。長雨を眺めている間に、私の美しさも年とともに過ぎた。"},{"id":10,"cue":"これやこの","answerCue":"しるもしらぬも","word":"これや、この汁も知らぬ","weak":false,"alt":"これや、この汁漏れ","lines":["これやこの","行くも帰るも","別れては","知るも知らぬも","逢坂の関"],"author":"蝉丸","meaning":"これが、人々が行き来し、知る人も知らぬ人も出会い別れる逢坂の関なのだ。"},{"id":11,"cue":"わたのはら やそしま","answerCue":"ひとにはつげよ","word":"腸の腹や、人にハツ","weak":true,"alt":"綿の腹破れ、人には言えない","lines":["わたの原","八十島かけて","漕ぎ出でぬと","人には告げよ","あまの釣舟"],"author":"参議篁","meaning":"広い海を、たくさんの島へ向かって船出したと、釣り舟よ、人々に伝えてくれ。"},{"id":12,"cue":"あまつかぜ","answerCue":"をとめのすがた","word":"雨っ風、お止め！","weak":false,"alt":"甘ったれ乙女","lines":["天つ風","雲の通ひ路","吹きとぢよ","をとめの姿","しばしとどめむ"],"author":"僧正遍昭","meaning":"天の風よ、天女たちの帰り道を雲でふさいで、その美しい姿をもう少し見せておくれ。"},{"id":13,"cue":"つくばねの","answerCue":"こひぞつもりて","word":"突く羽根の、故意ぞ、つもりで","weak":false,"alt":"つくね、濃いぞ","lines":["筑波嶺の","峰より落つる","みなの川","恋ぞつもりて","淵となりぬる"],"author":"陽成院","meaning":"筑波山から流れる川が深い淵になるように、私の恋心も積もり積もって深くなった。"},{"id":14,"cue":"みちのくの","answerCue":"みだれそめにし","word":"みちのくの、乱れそうめん","weak":true,"alt":"未知の苦悩、乱れそう","lines":["みちのくの","しのぶもぢずり","誰ゆゑに","乱れそめにし","われならなくに"],"author":"河原左大臣","meaning":"乱れ模様の布のように、私の心は誰のせいでこんなに乱れ始めたのだろう。"},{"id":15,"cue":"きみがため はるのの","answerCue":"わがころもでに","word":"黄身固めは、我が衣で煮","weak":false,"alt":"黄身固めは、我が衣、出に","lines":["君がため","春の野に出でて","若菜摘む","わが衣手に","雪は降りつつ"],"author":"光孝天皇","meaning":"あなたのために春の野で若菜を摘んでいると、私の袖に雪が降りかかる。"},{"id":16,"cue":"たちわかれ","answerCue":"まつとしきかば","word":"立ち分かれ、マット敷き","weak":false,"alt":"立ち分かれ、マット敷き、カバ","lines":["立ち別れ","いなばの山の","峰に生ふる","まつとし聞かば","今帰り来む"],"author":"中納言行平","meaning":"遠くへ旅立つけれど、「待っている」と聞いたら、すぐに帰って来よう。"},{"id":17,"cue":"ちはやぶる","answerCue":"からくれなゐに","word":"血は破る、唐紅に","weak":true,"alt":"千春のカラオケ","lines":["ちはやぶる","神代も聞かず","竜田川","からくれなゐに","水くくるとは"],"author":"在原業平朝臣","meaning":"神代にも聞いたことがない。竜田川が紅葉によって真紅に染められるなんて。"},{"id":18,"cue":"すみのえの","answerCue":"ゆめのかよひぢ","word":"スケベな夢","weak":true,"alt":"墨の絵の、夢","lines":["住の江の","岸に寄る波","よるさへや","夢の通ひ路","人めよくらむ"],"author":"藤原敏行朝臣","meaning":"住吉の岸へ波が寄るように、夜もあなたを思う。夢の中でも人目を避けるのだろうか。"},{"id":19,"cue":"なにはがた","answerCue":"あはでこのよを","word":"浪花型、あ、派手","weak":false,"alt":"浪花ガタッ、慌て子の","lines":["難波潟","みじかき葦の","ふしの間も","逢はでこの世を","過ぐしてよとや"],"author":"伊勢","meaning":"短い葦の節の間ほどの時間さえ会わずに、私はこの世を過ごせというのか。"},{"id":20,"cue":"わびぬれば","answerCue":"みをつくしても","word":"詫び濡れ場、身を尽くしても","weak":true,"alt":"ワサビ塗れば、身を突くし、手も","lines":["わびぬれば","今はた同じ","難波なる","身をつくしても","逢はむとぞ思ふ"],"author":"元良親王","meaning":"苦しさはもう限界だ。身を滅ぼすことになっても、あなたに会いたい。"},{"id":21,"cue":"いまこむと","answerCue":"ありあけのつきを","word":"居間混むと、アリ","weak":false,"alt":"今、股間にアリ","lines":["今来むと","いひしばかりに","長月の","有明の月を","待ち出でつるかな"],"author":"素性法師","meaning":"「すぐ行く」と言った人を待ち続け、とうとう九月の夜明けの月を見るまでになった。"},{"id":22,"cue":"ふくからに","answerCue":"むべやまかぜを","word":"不合格は無勉","weak":true,"alt":"服、空に、むべ山風を","lines":["吹くからに","秋の草木の","しをるれば","むべ山風を","嵐といふらむ"],"author":"文屋康秀","meaning":"吹いた途端に草木をしおれさせるのだから、山からの風を「嵐」と呼ぶのももっともだ。"},{"id":23,"cue":"つきみれば","answerCue":"わがみひとつの","word":"月見れば、わっ、蛾見、ひとつの","weak":true,"alt":"築地で我が身干物","lines":["月見れば","千々に物こそ","悲しけれ","わが身ひとつの","秋にはあらねど"],"author":"大江千里","meaning":"月を見ると、さまざまなことが悲しい。秋は私一人にだけ来たわけではないのに。"},{"id":24,"cue":"このたびは","answerCue":"もみぢのにしき","word":"この度は、もみ消し","weak":false,"alt":"子の足袋は、もみじ","lines":["このたびは","幣もとりあへず","手向山","紅葉の錦","神のまにまに"],"author":"菅家","meaning":"今回の旅には神への供え物を用意できなかった。この美しい紅葉を代わりにお受け取りください。"},{"id":25,"cue":"なにしおはば","answerCue":"ひとにしられで","word":"何塩は？ 人に知られで","weak":true,"alt":"何してんの、人に尻","lines":["名にしおはば","逢坂山の","さねかづら","人に知られで","来るよしもがな"],"author":"三条右大臣","meaning":"「逢坂山のさねかずら」という名の通り、人に知られずあなたのもとへ行く方法がほしい。"},{"id":26,"cue":"をぐらやま","answerCue":"いまひとたびの みゆき","word":"小倉山、今、人、足袋のみ","weak":false,"alt":"おぐしに今ひとたびノミ","lines":["小倉山","峰のもみぢ葉","心あらば","今ひとたびの","行幸待たなむ"],"author":"貞信公","meaning":"小倉山の紅葉よ、心があるなら、天皇がもう一度訪れるまで散らずに待っていてほしい。"},{"id":27,"cue":"みかのはら","answerCue":"いつみきとてか","word":"ミカの腹、いつ見た？","weak":false,"alt":"ミカの腹、五つ子","lines":["みかの原","わきて流るる","泉川","いつ見きとてか","恋しかるらむ"],"author":"中納言兼輔","meaning":"泉川は私たちを隔てて流れる。まだ会ったこともないのに、なぜこんなに恋しいのだろう。"},{"id":28,"cue":"やまざとは","answerCue":"ひとめもくさも","word":"山ザル、ひと目も臭っ","weak":false,"alt":"山ザルにひと目ぼれ","lines":["山里は","冬ぞ寂しさ","まさりける","人目も草も","枯れぬと思へば"],"author":"源宗于朝臣","meaning":"山里は冬になるといっそう寂しい。訪れる人も草木もすっかり絶えてしまうから。"},{"id":29,"cue":"こころあてに","answerCue":"おきまどはせる","word":"心当たりのおなら","weak":true,"alt":"ここ炉、あ、手に熾き（審査役の案。こころあてに→ここ・炉・あ・手に／おき→熾き。補いゼロだが熾きがなじみ薄く、切れ切れ）","lines":["心あてに","折らばや折らむ","初霜の","置きまどはせる","白菊の花"],"author":"凡河内躬恒","meaning":"初霜と見分けがつかないほど白い菊の花を、当てずっぽうに折ってみようか。"},{"id":30,"cue":"ありあけの","answerCue":"あかつきばかり","word":"有明の、垢付きばかり","weak":false,"alt":"ありゃ、毛の垢付きばかり","lines":["有明の","つれなく見えし","別れより","暁ばかり","憂きものはなし"],"author":"壬生忠岑","meaning":"冷たい別れを経験して以来、夜明けほどつらく感じるものはない。"},{"id":31,"cue":"あさぼらけ ありあけ","answerCue":"よしののさとに","word":"朝、ほら、毛あり！ヨシ！","weak":false,"alt":"朝、ほら、ケア。ヨシ！","lines":["朝ぼらけ","有明の月と","見るまでに","吉野の里に","降れる白雪"],"author":"坂上是則","meaning":"夜明けの雪景色は、有明の月明かりかと思うほど吉野の里を白く染めている。"},{"id":32,"cue":"やまがはに","answerCue":"ながれもあへぬ","word":"山川に、流れモアイ","weak":false,"alt":"山が、ワニ！流れ…","lines":["山川に","風のかけたる","しがらみは","流れもあへぬ","紅葉なりけり"],"author":"春道列樹","meaning":"山の川をせき止めているのは、風が吹き集め、流れ切れずにたまった紅葉だった。"},{"id":33,"cue":"ひさかたの","answerCue":"しづごころなく","word":"久本、静かに！","weak":true,"alt":"膝、肩の、静心なく","lines":["ひさかたの","光のどけき","春の日に","静心なく","花の散るらむ"],"author":"紀友則","meaning":"こんなにのどかな春の日なのに、桜の花はどうして落ち着きなく散っていくのだろう。"},{"id":34,"cue":"たれをかも","answerCue":"まつもむかしの","word":"タレを鴨、まず揉む","weak":false,"alt":"誰をカモ？ まず揉む","lines":["誰をかも","知る人にせむ","高砂の","松も昔の","友ならなくに"],"author":"藤原興風","meaning":"誰を昔からの友と呼べばよいのだろう。高砂の松でさえ、私の古い友ではない。"},{"id":35,"cue":"ひとはいさ","answerCue":"はなぞむかしの","word":"人はいさ、歯なぞ昔の","weak":false,"alt":"人？ワイさ。歯なぞ昔の","lines":["人はいさ","心も知らず","ふるさとは","花ぞ昔の","香に匂ひける"],"author":"紀貫之","meaning":"人の心は変わったかもしれない。でも故郷の梅の花は、昔と同じ香りがする。"},{"id":36,"cue":"なつのよは","answerCue":"くものいづこに","word":"夏の夜は、蜘蛛の、いずこに？","weak":false,"alt":"納豆に蜘蛛の糸","lines":["夏の夜は","まだ宵ながら","明けぬるを","雲のいづこに","月宿るらむ"],"author":"清原深養父","meaning":"短い夏の夜はもう明けてしまった。月は雲のどこに隠れて泊まっているのだろう。"},{"id":37,"cue":"しらつゆに","answerCue":"つらぬきとめぬ","word":"しらふ、つらい","weak":false,"alt":"シラス湯煮、釣らぬ","lines":["白露に","風の吹きしく","秋の野は","つらぬきとめぬ","玉ぞ散りける"],"author":"文屋朝康","meaning":"露をのせた秋の野に風が吹き、糸を通していない真珠のような露が散っている。"},{"id":38,"cue":"わすらるる","answerCue":"ひとのいのちの","word":"わっ、ズラ！人の","weak":false,"alt":"わっ、ズラ！人の命の","lines":["忘らるる","身をば思はず","誓ひてし","人の命の","惜しくもあるかな"],"author":"右近","meaning":"忘れられる自分は構わない。でも約束を破ったあの人に天罰が下るのが心配だ。"},{"id":39,"cue":"あさぢふの","answerCue":"あまりてなどか","word":"朝ジムの余り肉","weak":false,"alt":"朝汁の余り","lines":["浅茅生の","小野の篠原","忍ぶれど","あまりてなどか","人の恋しき"],"author":"参議等","meaning":"気持ちを隠しているつもりでも、どうしてこんなにあの人が恋しくなるのだろう。"},{"id":40,"cue":"しのぶれど","answerCue":"ものやおもふと","word":"忍びのものもらい","weak":true,"alt":"死のブレード、物や重う","lines":["忍ぶれど","色に出でにけり","わが恋は","物や思ふと","人の問ふまで"],"author":"平兼盛","meaning":"恋心を隠していたのに、顔に出てしまった。人に「恋の悩みですか」と聞かれるほどに。"},{"id":41,"cue":"こひすてふ","answerCue":"ひとしれずこそ","word":"濃い酢ちょい、人知れず","weak":false,"alt":"来い！ひとし君","lines":["恋すてふ","わが名はまだき","立ちにけり","人知れずこそ","思ひそめしか"],"author":"壬生忠見","meaning":"人知れず恋し始めたのに、私が恋をしているという噂がもう広まってしまった。"},{"id":42,"cue":"ちぎりきな","answerCue":"すゑのまつやま","word":"千切り器、ナス","weak":false,"alt":"ちぎりきれないスルメ","lines":["契りきな","かたみに袖を","しぼりつつ","末の松山","波越さじとは"],"author":"清原元輔","meaning":"涙で袖を絞りながら、あの波が末の松山を越えないように心変わりしないと約束したのに。"},{"id":43,"cue":"あひみての","answerCue":"むかしはものを","word":"愛、見て、ムカッ","weak":false,"alt":"愛美、手のムカデ、刃物を！","lines":["逢ひ見ての","後の心に","くらぶれば","昔は物を","思はざりけり"],"author":"権中納言敦忠","meaning":"恋人に会った後の切なさと比べれば、会う前は恋の悩みなど知らなかったようなものだ。"},{"id":44,"cue":"あふことの","answerCue":"ひとをもみをも","word":"王、琴の人を揉み","weak":false,"alt":"おう、凝りの人を揉み","lines":["逢ふことの","絶えてしなくは","なかなかに","人をも身をも","恨みざらまし"],"author":"中納言朝忠","meaning":"いっそ出会わなければ、相手のことも自分のことも恨まずにすんだだろうに。"},{"id":45,"cue":"あはれとも","answerCue":"みのいたづらに","word":"哀れ友、見抜いたズラ","weak":false,"alt":"あ、割れ！友美のいたずら","lines":["あはれとも","いふべき人は","思ほえで","身のいたづらに","なりぬべきかな"],"author":"謙徳公","meaning":"かわいそうだと言ってくれる人も思い当たらず、むなしく命が終わってしまいそうだ。"},{"id":46,"cue":"ゆらのとを","answerCue":"ゆくへもしらぬ","word":"由良の門を、行く屁も知らぬ","weak":false,"alt":"ゆら、喉を行く","lines":["由良の門を","渡る舟人","かぢを絶え","ゆくへも知らぬ","恋の道かな"],"author":"曽禰好忠","meaning":"舵を失った舟のように、私の恋がどこへ向かうのかまったく分からない。"},{"id":47,"cue":"やへむぐら","answerCue":"ひとこそみえね","word":"や、えっ、モグラ!? 人こそ見えねぇ","weak":false,"alt":"八重歯の人こそ見え","lines":["八重葎","茂れる宿の","さびしきに","人こそ見えね","秋は来にけり"],"author":"恵慶法師","meaning":"人の訪れない荒れた家にも、秋だけはちゃんとやって来た。"},{"id":48,"cue":"かぜをいたみ","answerCue":"くだけてものを","word":"風邪、老いた身、砕けて","weak":false,"alt":"風邪、老いた身、砕けてものう","lines":["風をいたみ","岩うつ波の","おのれのみ","くだけて物を","思ふころかな"],"author":"源重之","meaning":"岩に打ちつけられて砕ける波のように、私だけが心を砕いて恋に悩んでいる。"},{"id":49,"cue":"みかきもり","answerCue":"ひるはきえつつ","word":"見ぃ、牡蠣盛り、昼吐き","weak":false,"alt":"ミカ、キモッ！ ヒル、脇","lines":["みかきもり","衛士のたく火の","夜は燃え","昼は消えつつ","物をこそ思へ"],"author":"大中臣能宣朝臣","meaning":"衛士の火が夜に燃え昼に消えるように、私も夜は恋心を燃やし、昼は胸に秘めている。"},{"id":50,"cue":"きみがため をしから","answerCue":"ながくもがなと","word":"君がため、お尻から長く","weak":false,"alt":"君がため、お風呂長く","lines":["君がため","惜しからざりし","命さへ","長くもがなと","思ひけるかな"],"author":"藤原義孝","meaning":"あなたのためなら惜しくなかった命なのに、会えた今では長生きしたくなった。"},{"id":51,"cue":"かくとだに","answerCue":"さしもしらじな","word":"掻くとダニ、刺し虫","weak":false,"alt":"","lines":["かくとだに","えやはいぶきの","さしも草","さしも知らじな","燃ゆる思ひを"],"author":"藤原実方朝臣","meaning":"これほどあなたを愛しているとは口に出せない。激しく燃えるこの思いを知らないでしょう。"},{"id":52,"cue":"あけぬれば","answerCue":"なほうらめしき","word":"開けぬれば、な、ほうら飯","weak":false,"alt":"開けぬレバー、なお恨めし","lines":["明けぬれば","暮るるものとは","知りながら","なほ恨めしき","朝ぼらけかな"],"author":"藤原道信朝臣","meaning":"また夜になると分かっていても、あなたと別れる朝が来るのは恨めしい。"},{"id":53,"cue":"なげきつつ","answerCue":"いかにひさしき","word":"投げキッス、イカに","weak":false,"alt":"投げキッス、イカ、ニヒル","lines":["嘆きつつ","ひとり寝る夜の","明くる間は","いかに久しき","ものとかは知る"],"author":"右大将道綱母","meaning":"一人で嘆きながら寝る夜が明けるまで、どれほど長く感じるかあなたには分かるまい。"},{"id":54,"cue":"わすれじの","answerCue":"けふをかぎりの","word":"忘れ痔の、今日を限り","weak":true,"alt":"忘れ痔の、今日を限りの命","lines":["忘れじの","行く末までは","難ければ","今日を限りの","命ともがな"],"author":"儀同三司母","meaning":"「忘れない」という約束がいつまでも続くとは思えない。幸せな今日のうちに死にたいほどだ。"},{"id":55,"cue":"たきのおとは","answerCue":"なこそながれて","word":"滝の夫は、名古屋流れて","weak":false,"alt":"滝のお父は、泣こう、流れて","lines":["滝の音は","絶えて久しく","なりぬれど","名こそ流れて","なほ聞こえけれ"],"author":"大納言公任","meaning":"滝の音はずっと昔に絶えたけれど、その名声は今も流れ伝わって聞こえてくる。"},{"id":56,"cue":"あらざらむ","answerCue":"いまひとたびの あふこと","word":"あら、ザラメ、今ひとたびの炙り","weak":false,"alt":"あら、ザ・ラム、今ひとたびの炙り","lines":["あらざらむ","この世のほかの","思ひ出に","いまひとたびの","逢ふこともがな"],"author":"和泉式部","meaning":"もうすぐ死ぬ私に、この世の最後の思い出として、もう一度だけあなたに会わせてほしい。"},{"id":57,"cue":"めぐりあひて","answerCue":"くもがくれにし","word":"めぐり相手、雲隠れ","weak":false,"alt":"めぐり相手、蜘蛛がくれ","lines":["めぐり逢ひて","見しやそれとも","わかぬ間に","雲がくれにし","夜半の月かな"],"author":"紫式部","meaning":"久々に会った友は、確かめる間もなく雲に隠れた月のように去ってしまった。"},{"id":58,"cue":"ありまやま","answerCue":"いでそよひとを","word":"蟻、まぁ山！いでっ","weak":false,"alt":"あります山、出でそうよ","lines":["有馬山","猪名の笹原","風吹けば","いでそよ人を","忘れやはする"],"author":"大弐三位","meaning":"有馬山から吹く風が笹をそよがせる。そう、その通り。私があなたを忘れるはずはない。"},{"id":59,"cue":"やすらはで","answerCue":"かたぶくまでの","word":"ヤスらは堅物","weak":true,"alt":"ヤスらはデカ、堅物","lines":["やすらはで","寝なましものを","さ夜更けて","かたぶくまでの","月を見しかな"],"author":"赤染衛門","meaning":"ためらわず寝ればよかったのに、来ない人を待って月が傾くまで起きていた。"},{"id":60,"cue":"おほえやま","answerCue":"まだふみもみず","word":"おお、絵や！まだ踏みも見ず","weak":false,"alt":"おお、ええ山、まだ踏みも見ず","lines":["大江山","いく野の道の","遠ければ","まだふみも見ず","天の橋立"],"author":"小式部内侍","meaning":"大江山を越える道は遠いので、天の橋立にはまだ行ってもいないし、母の手紙も見ていない。"},{"id":61,"cue":"いにしへの","answerCue":"けふここのへに","word":"いにしえの京子、この絵に","weak":true,"alt":"胃に穴、今日こそ辞める","lines":["いにしへの","奈良の都の","八重桜","けふ九重に","匂ひぬるかな"],"author":"伊勢大輔","meaning":"昔の奈良の八重桜が、今日は宮中で美しく咲き誇っていることよ。"},{"id":62,"cue":"よをこめて","answerCue":"よにあふさかの","word":"ヨーコ、目で「夜に会うさ」","weak":false,"alt":"夜をこめて夜逃げ","lines":["夜をこめて","鳥のそら音は","はかるとも","世に逢坂の","関はゆるさじ"],"author":"清少納言","meaning":"夜明け前に鶏の鳴きまねをしても、逢坂の関の門は決して開けませんよ。"},{"id":63,"cue":"いまはただ","answerCue":"ひとづてならで","word":"今はタダ、人妻なら","weak":false,"alt":"今はタダ、人づてなら","lines":["今はただ","思ひ絶えなむ","とばかりを","人づてならで","いふよしもがな"],"author":"左京大夫道雅","meaning":"別れを決意したと、せめて人づてでなく直接あなたに伝える方法があればいいのに。"},{"id":64,"cue":"あさぼらけ うぢの","answerCue":"あらはれわたる","word":"朝ぼらけ、蛆の現れわたる","weak":false,"alt":"朝ぼらけ、浮気露わ","lines":["朝ぼらけ","宇治の川霧","たえだえに","あらはれわたる","瀬々の網代木"],"author":"権中納言定頼","meaning":"夜明けの宇治川では霧が切れ切れになり、川のあちこちに網代木が姿を見せている。"},{"id":65,"cue":"うらみわび","answerCue":"こひにくちなむ","word":"恨み詫び、濃い肉","weak":false,"alt":"恨みわさび、濃い肉","lines":["恨みわび","ほさぬ袖だに","あるものを","恋に朽ちなむ","名こそ惜しけれ"],"author":"相模","meaning":"恨み疲れ、涙で袖が乾かない。この恋のせいで評判まで傷つくのが惜しい。"},{"id":66,"cue":"もろともに","answerCue":"はなよりほかに","word":"もろともに、花より団子","weak":true,"alt":"もろ出しの花嫁","lines":["もろともに","あはれと思へ","山桜","花よりほかに","知る人もなし"],"author":"前大僧正行尊","meaning":"山桜よ、私と互いに愛おしみ合おう。ここにはお前のほかに私を知る人はいない。"},{"id":67,"cue":"はるのよの","answerCue":"かひなくたたむ","word":"張るのよ、甲斐なく畳む","weak":false,"alt":"春の解雇","lines":["春の夜の","夢ばかりなる","手枕に","かひなく立たむ","名こそ惜しけれ"],"author":"周防内侍","meaning":"春の夜の夢ほどはかない手枕のために、つまらない噂が立つのは残念だ。"},{"id":68,"cue":"こころにも","answerCue":"こひしかるべき","word":"心にも小石","weak":false,"alt":"心にも、来い！叱る","lines":["心にも","あらでうき世に","ながらへば","恋しかるべき","夜半の月かな"],"author":"三条院","meaning":"望まずしてこの世に生き長らえたら、今夜の月を恋しく思い出すのだろう。"},{"id":69,"cue":"あらしふく","answerCue":"たつたのかはの","word":"あら、至福、竜田の皮","weak":false,"alt":"あら、至福、勃ったのか","lines":["嵐吹く","三室の山の","もみぢ葉は","竜田の川の","錦なりけり"],"author":"能因法師","meaning":"三室山の紅葉が嵐で散り、竜田川の水面を錦織りのように飾っている。"},{"id":70,"cue":"さびしさに","answerCue":"いづこもおなじ","word":"寂しさに、伊豆籠もり","weak":true,"alt":"寂しさに伊豆","lines":["さびしさに","宿を立ち出でて","ながむれば","いづくも同じ","秋の夕暮れ"],"author":"良暹法師","meaning":"寂しくて外へ出て眺めたけれど、どこも同じ寂しい秋の夕暮れだった。"},{"id":71,"cue":"ゆふされば","answerCue":"あしのまろやに","word":"夕されば足のまめ","weak":true,"alt":"幽霊に足","lines":["夕されば","門田の稲葉","おとづれて","蘆のまろやに","秋風ぞ吹く"],"author":"大納言経信","meaning":"夕方、田んぼの稲葉を揺らして、葦ぶきの小屋に秋風が吹き込んでくる。"},{"id":72,"cue":"おとにきく","answerCue":"かけじやそでの","word":"夫に効く？賭けじゃ","weak":false,"alt":"夫に効く掛け軸","lines":["音に聞く","高師の浜の","あだ波は","かけじや袖の","濡れもこそすれ"],"author":"祐子内親王家紀伊","meaning":"評判に聞く高師の浜の荒波のような浮気な人には心を寄せまい。涙で袖が濡れるから。"},{"id":73,"cue":"たかさごの","answerCue":"とやまのかすみ","word":"高砂の、富山のかすみ","weak":false,"alt":"高砂の、富山のカス","lines":["高砂の","尾上の桜","咲きにけり","外山の霞","立たずもあらなむ"],"author":"前権中納言匡房","meaning":"高砂の山の桜が咲いた。近くの山の霞よ、花を隠さないでほしい。"},{"id":74,"cue":"うかりける","answerCue":"はげしかれとは","word":"うっかりハゲ","weak":false,"alt":"","lines":["憂かりける","人を初瀬の","山おろしよ","はげしかれとは","祈らぬものを"],"author":"源俊頼朝臣","meaning":"冷たいあの人の心が変わるよう祈ったけれど、こんな激しい山風を願ったわけではない。"},{"id":75,"cue":"ちぎりおきし","answerCue":"あはれことしの","word":"契り起きし、あ、晴れ","weak":false,"alt":"ちぎりおかき、あ、割れ","lines":["契りおきし","させもが露を","命にて","あはれ今年の","秋もいぬめり"],"author":"藤原基俊","meaning":"頼りにしていた約束の露もむなしく、今年の秋も過ぎようとしている。"},{"id":76,"cue":"わたのはら こぎいでて","answerCue":"くもゐにまがふ","word":"綿の腹、子蜘蛛いる","weak":false,"alt":"綿の腹コーギー、雲居に紛う","lines":["わたの原","漕ぎ出でて見れば","久方の","雲居にまがふ","沖つ白波"],"author":"法性寺入道前関白太政大臣","meaning":"大海原へ漕ぎ出すと、遠い雲と見間違うほど白い沖の波が見える。"},{"id":77,"cue":"せをはやみ","answerCue":"われてもすゑに","word":"セクシー割れアゴ","weak":true,"alt":"瀬尾・速水、割れても末に","lines":["瀬を早み","岩にせかるる","滝川の","われても末に","逢はむとぞ思ふ"],"author":"崇徳院","meaning":"速い川が岩で分かれてもまた合流するように、別れてもいつか必ずあなたに会いたい。"},{"id":78,"cue":"あはぢしま","answerCue":"いくよねざめぬ","word":"淡路島、行くよ、寝覚めぬ","weak":false,"alt":"淡路島行くよね？サメ","lines":["淡路島","通ふ千鳥の","鳴く声に","いく夜寝覚めぬ","須磨の関守"],"author":"源兼昌","meaning":"淡路島へ通う千鳥の声を聞いて、須磨の関守は幾晩眠りを妨げられただろう。"},{"id":79,"cue":"あきかぜに","answerCue":"もれいづるつきの","word":"秋、風邪に漏れ、ずるっ","weak":false,"alt":"秋風邪に、漏れ出る","lines":["秋風に","たなびく雲の","絶え間より","もれ出づる月の","影のさやけさ"],"author":"左京大夫顕輔","meaning":"秋風になびく雲の切れ間から、澄みきった月の光がもれてくる。"},{"id":80,"cue":"ながからむ","answerCue":"みだれてけさは","word":"長カツラ、乱れて","weak":false,"alt":"長〜、絡む、乱れて今朝は","lines":["長からむ","心も知らず","黒髪の","乱れて今朝は","物をこそ思へ"],"author":"待賢門院堀河","meaning":"あなたの心が長続きするか分からず、黒髪のように心が乱れて今朝は悩んでいる。"},{"id":81,"cue":"ほととぎす","answerCue":"ただありあけの","word":"ホトトギス、タダ・アリア","weak":false,"alt":"ほっと、タダあり","lines":["ほととぎす","鳴きつる方を","ながむれば","ただ有明の","月ぞ残れる"],"author":"後徳大寺左大臣","meaning":"ほととぎすの声がした方を眺めたら、夜明けの空には月だけが残っていた。"},{"id":82,"cue":"おもひわび","answerCue":"うきにたへぬは","word":"重いわ！浮きに耐えぬは","weak":false,"alt":"おもらしウキウキ","lines":["思ひわび","さても命は","あるものを","憂きに堪へぬは","涙なりけり"],"author":"道因法師","meaning":"恋に苦しんでも生きてはいる。ただ、つらさに耐えられず涙だけが止まらない。"},{"id":83,"cue":"よのなかよ","answerCue":"やまのおくにも","word":"夜の仲よ、山の奥にも","weak":true,"alt":"世の中、欲が山ほど","lines":["世の中よ","道こそなけれ","思ひ入る","山の奥にも","鹿ぞ鳴くなる"],"author":"皇太后宮大夫俊成","meaning":"世の中から逃れる道はない。山奥に入っても鹿が悲しげに鳴いている。"},{"id":84,"cue":"ながらへば","answerCue":"うしとみしよぞ","word":"長良、餌場、鵜匠","weak":false,"alt":"ながら丑の刻参り","lines":["ながらへば","またこのごろや","しのばれむ","憂しと見し世ぞ","今は恋しき"],"author":"藤原清輔朝臣","meaning":"生き長らえれば、今のつらさも懐かしくなるのだろう。昔つらかった日々が今は恋しいように。"},{"id":85,"cue":"よもすがら","answerCue":"ねやのひまさへ","word":"夜もすがら？寝や！","weak":false,"alt":"夜もすがら？寝や、暇さえ","lines":["夜もすがら","物思ふころは","明けやらで","閨のひまさへ","つれなかりけり"],"author":"俊恵法師","meaning":"物思いで眠れない夜は、寝室の戸の隙間さえ夜明けを知らせてくれず冷たい。"},{"id":86,"cue":"なげけとて","answerCue":"かこちがほなる","word":"投げけとて、籠ちがう！","weak":false,"alt":"嘆け、過去の栄光","lines":["嘆けとて","月やは物を","思はする","かこち顔なる","わが涙かな"],"author":"西行法師","meaning":"月が私を悲しませるわけでもないのに、月のせいにするように涙がこぼれる。"},{"id":87,"cue":"むらさめの","answerCue":"きりたちのぼる","word":"村雨の斬り太刀","weak":false,"alt":"群サメの、切り立ち昇る","lines":["村雨の","露もまだひぬ","槙の葉に","霧立ちのぼる","秋の夕暮れ"],"author":"寂蓮法師","meaning":"にわか雨が過ぎた槙の葉には露が残り、霧が立ち昇る秋の夕暮れだ。"},{"id":88,"cue":"なにはえの","answerCue":"みをつくしてや","word":"なにわエステ、身を尽くしてや","weak":false,"alt":"浪速ええの、身を尽くしてや","lines":["難波江の","蘆のかりねの","ひとよゆゑ","みをつくしてや","恋ひわたるべき"],"author":"皇嘉門院別当","meaning":"葦の刈り寝のような短い一夜のために、一生をかけて恋い続けなければならないのか。"},{"id":89,"cue":"たまのをよ","answerCue":"しのぶることの","word":"タマの尾よ、忍ぶる","weak":false,"alt":"魂の尾、忍ぶる","lines":["玉の緒よ","絶えなば絶えね","ながらへば","忍ぶることの","弱りもぞする"],"author":"式子内親王","meaning":"命よ、絶えるなら絶えてしまえ。生きていると、秘密の恋心を隠しきれなくなりそうだ。"},{"id":90,"cue":"みせばやな","answerCue":"ぬれにぞぬれし","word":"見せ場やな、濡れにぞ濡れし","weak":false,"alt":"見せパン濡れ","lines":["見せばやな","雄島のあまの","袖だにも","濡れにぞ濡れし","色は変はらず"],"author":"殷富門院大輔","meaning":"涙に濡れた私の袖を見せたい。漁師の袖と違って、涙で色まで変わってしまった。"},{"id":91,"cue":"きりぎりす","answerCue":"ころもかたしき","word":"錐ギリ、衣硬し","weak":true,"alt":"霧イギリス、衣硬し","lines":["きりぎりす","鳴くや霜夜の","さむしろに","衣かたしき","ひとりかも寝む"],"author":"後京極摂政前太政大臣","meaning":"霜の降る寒い夜、むしろの上で衣を片敷き、一人きりで眠るのだろうか。"},{"id":92,"cue":"わがそでは","answerCue":"ひとこそしらね","word":"我が袖は一個、そ知らぬ","weak":false,"alt":"若そうでは、人こそ白根","lines":["わが袖は","潮干に見えぬ","沖の石の","人こそ知らね","乾く間もなし"],"author":"二条院讃岐","meaning":"海が引いても見えない沖の石のように、誰にも知られず涙で袖が乾かない。"},{"id":93,"cue":"よのなかは","answerCue":"あまのをぶねの","word":"世の中は甘ぇのぉ","weak":false,"alt":"世の中は天邪鬼","lines":["世の中は","常にもがもな","渚漕ぐ","あまの小舟の","綱手かなしも"],"author":"鎌倉右大臣","meaning":"世の中はいつまでもこのままであってほしい。岸辺を進む小舟を引く光景が愛おしい。"},{"id":94,"cue":"みよしのの","answerCue":"ふるさとさむく","word":"見よ、フルチン","weak":false,"alt":"見よ、降る砂糖、寒く","lines":["み吉野の","山の秋風","さ夜更けて","ふるさと寒く","衣うつなり"],"author":"参議雅経","meaning":"吉野の山の秋風が夜更けに吹き、古い都では寒々と衣を打つ音が聞こえる。"},{"id":95,"cue":"おほけなく","answerCue":"わがたつそまに","word":"大けがなく、我が立つ","weak":true,"alt":"大ケツ、わが宝","lines":["おほけなく","うき世の民に","おほふかな","わが立つ杣に","墨染の袖"],"author":"前大僧正慈円","meaning":"身に余ることだが、仏に仕えるこの墨染めの袖で、苦しい世の人々を包み守りたい。"},{"id":96,"cue":"はなさそふ","answerCue":"ふりゆくものは","word":"鼻刺そう、降りゆく","weak":false,"alt":"花咲（か）そう、振りゆく","lines":["花さそふ","嵐の庭の","雪ならで","ふりゆくものは","わが身なりけり"],"author":"入道前太政大臣","meaning":"嵐に花が雪のように散る。実際に古びていくのは花ではなく、この私自身なのだ。"},{"id":97,"cue":"こぬひとを","answerCue":"やくやもしほの","word":"来ぬ人を焼くや","weak":false,"alt":"来ぬなら焼くぞ","lines":["来ぬ人を","まつほの浦の","夕なぎに","焼くや藻塩の","身もこがれつつ"],"author":"権中納言定家","meaning":"来ない人を待ち続け、海辺で藻塩を焼く火のように、わが身も恋に焦がれている。"},{"id":98,"cue":"かぜそよぐ","answerCue":"みそぎぞなつの","word":"風邪そうよ、三十路ぞ、夏の","weak":false,"alt":"風邪そう？禊ぞ","lines":["風そよぐ","楢の小川の","夕暮れは","みそぎぞ夏の","しるしなりける"],"author":"従二位家隆","meaning":"楢の小川に風がそよぐ夕暮れ。禊の行事だけが、まだ夏であることを伝えている。"},{"id":99,"cue":"ひともをし","answerCue":"よをおもふゆゑに","word":"人も推し、余を思うゆえに","weak":true,"alt":"人も押し、よぉ重","lines":["人もをし","人も恨めし","あぢきなく","世を思ふゆゑに","物思ふ身は"],"author":"後鳥羽院","meaning":"人は愛おしくも恨めしくもある。思い通りにならない世の中を考え、私は悩み続ける。"},{"id":100,"cue":"ももしきや","answerCue":"なほあまりある","word":"股引や、なお余りある","weak":false,"alt":"桃太郎、なおアホ","lines":["百敷や","古き軒端の","しのぶにも","なほあまりある","昔なりけり"],"author":"順徳院","meaning":"古い宮殿の軒に生える忍ぶ草を見ると、しのんでもしのびきれない昔が思い出される。"}];
+const DUP=new Set([11,15,31,50,64,76]);
+const KEY='hyakunin_mnemonic_dojo_v1';
+const $=(s)=>document.querySelector(s);
+const $$=(s)=>Array.from(document.querySelectorAll(s));
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function initStore(){try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');return saved&&typeof saved==='object'&&saved.progress&&saved.words?saved:{progress:{},words:{}};}catch(e){return {progress:{},words:{}};}}
+let store=initStore(),tab='practice',filter='all',cueMode='short',shuffle=true,queue=[],cursor=0,current=null,revealed=false,showHint=false,expanded=false,editing=false,manualTarget=null;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store));return true;}catch(e){return false;}}
+function pof(id){return store.progress[id]||{score:0,count:0,streak:0};}
+function wordof(p){return Object.prototype.hasOwnProperty.call(store.words,p.id)?store.words[p.id]:p.word;}
+function progressCounts(){const a={mastered:0,shaky:0,weak:0,unseen:0};for(const p of POEMS){const q=pof(p.id);if(q.score===3)a.mastered++;else if(q.score===2)a.shaky++;else if(q.score===1)a.weak++;else a.unseen++;}return a;}
+function updateStats(){const x=progressCounts();Object.entries(x).forEach(([k,v])=>$('#stat-'+k).textContent=v);}
+function matches(p,f){const x=pof(p.id);if(f==='all')return true;if(f==='unmastered')return x.score!==3;if(f==='weak')return x.score===1;if(f==='due')return x.count>0&&(!x.due||x.due<=Date.now());if(f==='duplicates')return DUP.has(p.id);if(f==='shaky')return x.score===2;if(f==='mastered')return x.score===3;return true;}
+function makeQueue(targetId=null){queue=POEMS.filter(p=>matches(p,filter)).map(p=>p.id);if(shuffle){for(let i=queue.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[queue[i],queue[j]]=[queue[j],queue[i]];}}cursor=0;if(targetId!==null){const n=queue.indexOf(targetId);if(n>=0)cursor=n;}current=queue.length?POEMS[queue[cursor]-1]:null;revealed=false;showHint=false;expanded=false;editing=false;render();}
+function cueText(p){if(cueMode==='short')return `<span class="cue-highlight">${escapeHtml(p.cue.replace(/\s+/g,'　'))}</span>`;return p.lines.slice(0,3).map((line,i)=>`<span${i===0?' class="cue-highlight"':''}>${escapeHtml(line)}</span>`).join('');}
+function render(){updateStats();$('#quiz').classList.toggle('is-hidden',!current);$('#practice-empty').classList.toggle('is-hidden',!!current);if(!current)return;const p=current,q=pof(p.id);$('#card-number').textContent=String(p.id).padStart(2,'0');$('#card-place').textContent=`${cursor+1} / ${queue.length} 首 · ${p.author}`;$('#card-badges').innerHTML=(DUP.has(p.id)?'<span class="pill">大山札・6文字決まり</span>':'')+(p.weak?'<span class="pill weak" style="margin-left:6px">語呂△</span>':'');$('#cue-text').innerHTML=cueText(p);$('#expand-upper').classList.toggle('is-hidden',cueMode==='full');$('#expand-upper').textContent=expanded?'上の句を隠す':'上の句を全文見る';if(cueMode==='short'&&expanded)$('#cue-text').innerHTML=cueText(p)+'<div class="small-line" style="color:#687779;margin-top:10px">'+p.lines.slice(0,3).map(escapeHtml).join(' ／ ')+'</div>';
+$('#hintbox').classList.toggle('is-hidden',!showHint);$('#hint-word').textContent=wordof(p);$('#question-buttons').classList.toggle('is-hidden',revealed);$('#answer-pane').classList.toggle('is-hidden',!revealed);$('#answer-text').innerHTML=p.lines.slice(3).map(escapeHtml).join('　／　');$('#full-poem').innerHTML=p.lines.map((line,i)=>`<span class="${i>=3?'low':''}">${escapeHtml(line)}</span>`).join('');$('#poem-author').textContent='作者：'+p.author;$('#answer-word').textContent=wordof(p);$('#meaning').textContent=p.meaning;$('#word-editor').classList.toggle('is-hidden',!editing);$('#word-input').value=wordof(p);$$('[data-score]').forEach(btn=>{btn.classList.toggle('chosen',Number(btn.dataset.score)===q.score);btn.setAttribute('aria-pressed',Number(btn.dataset.score)===q.score?'true':'false');});$('#review-note').textContent=q.count?`練習 ${q.count} 回 · ${q.score===3?'覚えた':q.score===2?'あやしい':'苦手'}として記録済み`:'結果を記録すると次回の復習に反映します。';$('#next-note').textContent=revealed?'答えを確認したら次の札へ。':'頭の音から、下の句の最初の音を思い出してください。';}
+function showAnswer(){if(!current)return;revealed=true;editing=false;render();$('#answer-pane').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function next(){if(!queue.length)return;if(cursor+1>=queue.length){if(shuffle){makeQueue();return;}cursor=0;}else cursor++;current=POEMS[queue[cursor]-1];revealed=false;showHint=false;expanded=false;editing=false;render();window.scrollTo({top:0,behavior:'smooth'});}
+function rate(score){if(!current)return;const q=pof(current.id),streak=score===3?(q.streak||0)+1:0;let due=Date.now();if(score===2)due+=24*3600*1000;if(score===3)due+=Math.min(30,Math.pow(2,Math.min(streak,5)))*24*3600*1000;store.progress[current.id]={score,count:(q.count||0)+1,streak,due,last:Date.now()};save();render();}
+function switchTab(id){tab=id;$$('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===id)));$('#practice-view').classList.toggle('is-hidden',id!=='practice');$('#library-view').classList.toggle('is-hidden',id!=='library');$('#guide-view').classList.toggle('is-hidden',id!=='guide');if(id==='library')renderList();window.scrollTo({top:0,behavior:'smooth'});}
+function openFromList(id){const n=POEMS.find(p=>p.id===id);if(!n)return;filter='all';$('#filter').value='all';makeQueue(id);revealed=true;render();switchTab('practice');}
+function normalize(s){return String(s).toLowerCase().replace(/[\s　・、。／「」『』\-]/g,'');}
+function renderList(){const q=normalize($('#search').value),f=$('#library-filter').value;const list=POEMS.filter(p=>matches(p,f)&&(!q||normalize([p.id,p.id.toString().padStart(2,'0'),p.cue,p.answerCue,p.word,wordof(p),p.author,p.meaning,...p.lines].join(' ')).includes(q)));$('#list-count').textContent=`${list.length} 首を表示`;$('#card-list').innerHTML=list.map(p=>{const a=pof(p.id),stat=a.score===3?['ok','覚えた']:a.score===2?['mid','あやしい']:a.score===1?['bad','苦手']:['','未学習'];return `<button type="button" class="listcard" data-open="${p.id}"><div class="lc-top"><span class="lc-index">${String(p.id).padStart(2,'0')}</span>${DUP.has(p.id)?'<span class="pill">大山札</span>':''}${p.weak?'<span class="pill weak">△</span>':''}<span class="lc-state ${stat[0]}">${stat[1]}</span></div><div class="lc-word">${escapeHtml(wordof(p))}</div><div class="lc-pair">${escapeHtml(p.cue)} → ${escapeHtml(p.answerCue)}</div></button>`;}).join('')||'<p class="muted">一致する札がありません。</p>';$$('[data-open]').forEach(b=>b.addEventListener('click',()=>openFromList(Number(b.dataset.open))));}
+function speak(){if(!current||!('speechSynthesis' in window)){alert('このブラウザーでは音声読み上げを利用できません。');return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(current.lines.join('、'));u.lang='ja-JP';u.rate=.78;window.speechSynthesis.speak(u);}
+function exportData(){const payload={app:'hyakunin_mnemonic_dojo',version:1,exportedAt:new Date().toISOString(),data:store};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='hyakunin_anki_progress.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);}
+function importData(file){if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const raw=JSON.parse(reader.result);if(raw.app!=='hyakunin_mnemonic_dojo'||!raw.data||!raw.data.progress||!raw.data.words)throw Error('形式が一致しません');if(!confirm('現在の学習記録と語呂の編集内容を、このファイルで置き換えますか？'))return;store={progress:raw.data.progress,words:raw.data.words};save();makeQueue();renderList();alert('学習記録を読み込みました。');}catch(e){alert('読み込めませんでした。記録用JSONを指定してください。');}};reader.readAsText(file);}
+$$('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+$('#filter').addEventListener('change',e=>{filter=e.target.value;makeQueue();});$('#cue-mode').addEventListener('change',e=>{cueMode=e.target.value;render();});$('#shuffle').addEventListener('click',()=>{shuffle=!shuffle;$('#shuffle').textContent='シャッフル '+(shuffle?'ON':'OFF');$('#shuffle').classList.toggle('active',shuffle);makeQueue();});$('#restart').addEventListener('click',()=>makeQueue());$('#show-all').addEventListener('click',()=>{$('#filter').value='all';filter='all';makeQueue();});$('#expand-upper').addEventListener('click',()=>{expanded=!expanded;render();});$('#hint-btn').addEventListener('click',()=>{showHint=!showHint;render();});$('#reveal-btn').addEventListener('click',showAnswer);$('#next').addEventListener('click',next);$$('[data-score]').forEach(b=>b.addEventListener('click',()=>rate(Number(b.dataset.score))));$('#listen').addEventListener('click',speak);$('#edit-word-btn').addEventListener('click',()=>{editing=!editing;render();if(editing)$('#word-input').focus();});$('#save-word').addEventListener('click',()=>{const s=$('#word-input').value.trim();if(!s){alert('語呂を入力してください。');return;}store.words[current.id]=s;save();editing=false;render();});$('#reset-word').addEventListener('click',()=>{delete store.words[current.id];save();editing=false;render();});$('#search').addEventListener('input',renderList);$('#library-filter').addEventListener('change',renderList);$('#export').addEventListener('click',exportData);$('#import-btn').addEventListener('click',()=>$('#import-file').click());$('#import-file').addEventListener('change',e=>{importData(e.target.files[0]);e.target.value='';});
+document.addEventListener('keydown',e=>{if(tab!=='practice'||!current||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key===' '){e.preventDefault();if(!revealed)showAnswer();else next();}else if(e.key==='ArrowRight'){next();}else if(['1','2','3'].includes(e.key)&&revealed){rate(Number(e.key));}});
+$('#storage-note').textContent=(()=>{try{const k='hyakunin_test';localStorage.setItem(k,'1');localStorage.removeItem(k);return 'このブラウザーではローカル保存が利用できます。';}catch(e){return '注意：ローカル保存を利用できない環境です。結果が保持されない可能性があります。';}})();
+makeQueue();
+document.documentElement.classList.add('enhanced');
+</script>
+</body>
+</html>
